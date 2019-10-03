@@ -56,9 +56,9 @@ body {
     width: 100vw;
     height: 100vh;
     background: $lightGray;
-    position: relative; 
+    position: relative;
 
-    #titulo{
+    #titulo {
         position: fixed;
         width: 100%;
         top: 100px;
@@ -83,17 +83,17 @@ body {
             width: 800px;
             height: 200px;
             border-style: solid;
-            border-color:$borderGray;
+            border-color: $borderGray;
             border-radius: 5px;
             margin: 10px;
             text-align: center;
 
-            h2{
+            h2 {
                 font-size: 18px;
                 padding: 20px;
             }
 
-            a{
+            a {
                 background: $darkBlue;
                 padding: 5px 15px;
                 color: white;
@@ -102,10 +102,10 @@ body {
             }
         }
 
-        div:hover{
+        div:hover {
             border-width: 4px;
 
-            a{
+            a {
                 background: $white;
                 color: $darkBlue;
                 font-weight: 500;
@@ -144,6 +144,7 @@ body {
         .actions {
             margin-right: 50px;
             width: 70px;
+            position: relative;
 
             // FLEX
             display: flex;
@@ -179,6 +180,67 @@ body {
                     justify-content: center;
                 }
             }
+
+            .notifications {
+                .notificationsPanel {
+                    position: absolute;
+                    top: 15px;
+                    right: -20px;
+                    width: 380px;
+                    height: fit-content;
+                    padding: 20px;
+                    background: $white;
+                    box-shadow: 0 0 12px -6px $shadow;
+                    border-radius: 5px;
+    
+                    // FLEX
+                    display: none;
+                    flex-direction: column;
+                    align-content: flex-start;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+    
+                    .notification {
+                        padding: 10px 5px;
+                        width: 100%;
+                        border-bottom: solid 1px $lightGray;
+    
+                        // FLEX
+                        display: flex;
+                        flex-direction: row;
+                        align-content: flex-start;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+    
+                        img {
+                            width: 50px;
+                            margin-right: 20px;
+                        }
+    
+                        p {
+                            flex: 1 1 auto;
+                            font-size: 13px;
+                            font-weight: 400;
+                            color: $gray;
+                        }
+    
+                        a {
+                            font-size: 11px;
+                            color: $borderGray;
+                        }
+    
+                        &:first-child {
+                            border-top: solid 1px $lightGray;
+                        }
+                    }
+                }
+
+                &:hover {
+                    .notificationsPanel {
+                        display: flex;
+                    }
+                }
+            }    
         }
 
         .name {
@@ -1038,6 +1100,7 @@ body {
                         align-content: flex-start;
                         align-items: center;
                         justify-content: flex-start;
+
                         p {
                             font-weight: 500;
                         }

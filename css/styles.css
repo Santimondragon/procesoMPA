@@ -157,6 +157,7 @@ body .topBar .profile {
 body .topBar .actions {
   margin-right: 50px;
   width: 70px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,6 +208,84 @@ body .topBar .actions i::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+body .topBar .actions .notifications .notificationsPanel {
+  position: absolute;
+  top: 15px;
+  right: -20px;
+  width: 380px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 20px;
+  background: #F0F0F0;
+  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+  border-radius: 5px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .topBar .actions .notifications .notificationsPanel .notification {
+  padding: 10px 5px;
+  width: 100%;
+  border-bottom: solid 1px #E7E7E7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .topBar .actions .notifications .notificationsPanel .notification img {
+  width: 50px;
+  margin-right: 20px;
+}
+
+body .topBar .actions .notifications .notificationsPanel .notification p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-size: 13px;
+  font-weight: 400;
+  color: #777777;
+}
+
+body .topBar .actions .notifications .notificationsPanel .notification a {
+  font-size: 11px;
+  color: #BBBBBB;
+}
+
+body .topBar .actions .notifications .notificationsPanel .notification:first-child {
+  border-top: solid 1px #E7E7E7;
+}
+
+body .topBar .actions .notifications:hover .notificationsPanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 body .topBar .name {
