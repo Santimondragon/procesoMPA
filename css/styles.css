@@ -1,0 +1,1500 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  color: #1A1A1A;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  list-style: none;
+  scroll-behavior: smooth;
+  letter-spacing: 0.03em;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: none;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-thumb:vertical {
+  background-color: #000641;
+}
+
+i {
+  color: #777777;
+  font-size: 24px;
+}
+
+i:hover {
+  color: #000641;
+  cursor: pointer;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #E7E7E7;
+  position: relative;
+}
+
+body #titulo {
+  position: fixed;
+  width: 100%;
+  top: 100px;
+  text-align: center;
+  font-size: 50px;
+}
+
+body .prototipos {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body .prototipos div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 800px;
+  height: 200px;
+  border-style: solid;
+  border-color: #BBBBBB;
+  border-radius: 5px;
+  margin: 10px;
+  text-align: center;
+}
+
+body .prototipos div h2 {
+  font-size: 18px;
+  padding: 20px;
+}
+
+body .prototipos div a {
+  background: #000641;
+  padding: 5px 15px;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+body .prototipos div:hover {
+  border-width: 4px;
+}
+
+body .prototipos div:hover a {
+  background: #F0F0F0;
+  color: #000641;
+  font-weight: 500;
+  border-color: #000641;
+  border-style: solid;
+}
+
+body .topBar {
+  background: #F0F0F0;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 90px;
+  -webkit-box-shadow: 0 0 12px -10px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -10px rgba(26, 26, 26, 0.25);
+  padding: 20px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .topBar .profile {
+  height: 100%;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+body .topBar .actions {
+  margin-right: 50px;
+  width: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .topBar .actions i {
+  font-size: 18px;
+  position: relative;
+}
+
+body .topBar .actions i::after {
+  content: "0";
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  width: 16px;
+  height: 16px;
+  border-radius: 20px;
+  background: #000E90;
+  color: #F0F0F0;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: sans-serif;
+  margin-top: -1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .topBar .name {
+  margin-right: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000641;
+}
+
+body #sideBar {
+  background: #F0F0F0;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 100vh;
+  -webkit-box-shadow: 0 0 12px -10px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -10px rgba(26, 26, 26, 0.25);
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #sideBar .menu {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #sideBar .menu .item {
+  height: 70px;
+  width: 70px;
+  border-top: solid 1px #BBBBBB;
+  border-right: solid 3px rgba(0, 0, 0, 0);
+  border-left: solid 3px rgba(0, 0, 0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #sideBar .menu .item:last-child {
+  border-bottom: solid 1px #BBBBBB;
+}
+
+body #sideBar .menu .item:hover {
+  cursor: pointer;
+}
+
+body #sideBar .menu .item:hover i {
+  color: #000641;
+}
+
+body #sideBar .menu .item.selected {
+  cursor: pointer;
+  border-right: solid 3px #000641;
+}
+
+body #sideBar .menu .item.selected i {
+  color: #000641;
+}
+
+body #dashboard {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  padding-top: 90px;
+  padding-left: 70px;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard .title {
+  width: 100%;
+  margin-top: 20px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard .class {
+  position: relative;
+  background: #F0F0F0;
+  width: calc(33.33% - 20px);
+  margin: 20px 0 0 20px;
+  padding-top: 19.83%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+  min-width: 300px;
+  min-height: 200px;
+}
+
+body #dashboard .class .progress {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard .class .progress .percentage {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background: #E7E7E7;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard .class .progress .percentage .fill {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+body #dashboard .class .progress .percentage .fill.a {
+  height: 100%;
+  background: #00C55A;
+}
+
+body #dashboard .class .progress .percentage .fill.b {
+  height: 50%;
+  background: #FF1E00;
+}
+
+body #dashboard .class .progress .percentage .fill.c {
+  height: 0%;
+  background: none;
+}
+
+body #dashboard .class .progress .percentage .percentageValue {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #F0F0F0;
+  font-weight: 700;
+  font-size: 15px;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard .class .progress .message {
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+body #dashboard .class .information {
+  position: absolute;
+  max-height: 70x;
+  min-height: 70x;
+  height: 70x;
+  bottom: 20px;
+  right: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard .class .information .name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+body #dashboard .class .information .other {
+  font-size: 13px;
+  margin-bottom: 3px;
+  color: #777777;
+}
+
+body #dashboard .decision {
+  position: relative;
+  background: #F0F0F0;
+  width: calc(33.33% - 20px);
+  margin: 20px 0 0 20px;
+  height: calc(100% - 70px);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+  padding: 20px 15px;
+  min-width: 300px;
+  min-height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard .decision .name {
+  font-size: 22px;
+  font-weight: 500;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard .decision .separator {
+  height: 1px;
+  width: 100%;
+  background: #BBBBBB;
+}
+
+body #dashboard .decision .softwares {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+body #dashboard .decision .softwares .software {
+  width: 100%;
+  border-bottom: solid 1px #E7E7E7;
+  padding: 15px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #dashboard .decision .softwares .software i {
+  font-size: 15px;
+}
+
+body #dashboard .decision .softwares .software .leftArrow {
+  margin-right: 15px;
+}
+
+body #dashboard .decision .softwares .software img {
+  width: 22px;
+}
+
+body #dashboard .decision .softwares .software .softName {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+body #dashboard .decision .softwares .software .version {
+  font-size: 14px;
+  font-style: italic;
+  color: #777777;
+}
+
+body #dashboard .decision .softwares .software .rightArrow {
+  margin-left: 15px;
+}
+
+body #dashboard .decision .softwares .software .comment {
+  display: none;
+}
+
+body #dashboard .decision .buttonHolder {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 15%;
+          flex: 0 1 15%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard .decision .buttonHolder a {
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #777777;
+  background: #BBBBBB;
+  cursor: progress;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard .decision .buttonHolder.done a {
+  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+  color: #F0F0F0;
+  background: #000E90;
+  cursor: pointer;
+}
+
+body #dashboard .decision.notNeeded .softwares .software .softName {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 65%;
+          flex: 0 1 65%;
+}
+
+body #dashboard .decision.notNeeded .softwares .software .leftArrow {
+  display: none;
+}
+
+body #dashboard .decision.notNeeded .softwares .software .comment {
+  display: none;
+}
+
+body #dashboard .decision.needed .softwares .software .softName {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 52%;
+          flex: 0 1 52%;
+}
+
+body #dashboard .decision.needed .softwares .software .rightArrow {
+  display: none;
+}
+
+body #dashboard .decision.needed .softwares .software .comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 2%;
+  margin-left: 4%;
+}
+
+body #dashboard .decision.needed .softwares .software .comment.empty i {
+  font-size: 17px;
+  color: #BBBBBB;
+}
+
+body #dashboard .decision.needed .softwares .software .comment.filled i {
+  font-size: 17px;
+  color: #000641;
+}
+
+body #dashboard .decision.needed .buttonHolder {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 15%;
+          flex: 0 1 15%;
+  width: 100%;
+}
+
+body #dashboard .decision.needed .buttonHolder a {
+  width: 140px;
+  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+  color: #F0F0F0;
+  background: #000E90;
+  cursor: pointer;
+}
+
+body #dashboard #popUpComment {
+  position: fixed;
+  z-index: 99;
+  top: 90px;
+  left: 70px;
+  background: rgba(0, 0, 0, 0.3);
+  width: calc(100% - 70px);
+  height: calc(100% - 90px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard #popUpComment .modal {
+  position: relative;
+  width: 450px;
+  height: 400px;
+  background: #F0F0F0;
+  border-radius: 5px;
+  padding: 25px 20px;
+  -webkit-box-shadow: 0 0 12px -10px #1A1A1A;
+          box-shadow: 0 0 12px -10px #1A1A1A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpComment .modal .icon {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 25px;
+}
+
+body #dashboard #popUpComment .modal .title {
+  margin: 0;
+  height: 40px;
+  font-size: 18px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #BBBBBB;
+}
+
+body #dashboard #popUpComment .modal .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+body #dashboard #popUpComment .modal .close i {
+  font-size: 16px;
+}
+
+body #dashboard #popUpComment .modal form {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 20px 10px 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #dashboard #popUpComment .modal form label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 3px;
+  text-indent: 5px;
+}
+
+body #dashboard #popUpComment .modal form select,
+body #dashboard #popUpComment .modal form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  resize: none;
+  -webkit-box-shadow: inset 0 0 6px 0px rgba(26, 26, 26, 0.25);
+          box-shadow: inset 0 0 6px 0px rgba(26, 26, 26, 0.25);
+}
+
+body #dashboard #popUpComment .modal form textarea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+body #dashboard #popUpComment .modal form a {
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  margin-top: 10px;
+  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+  font-weight: 400;
+  font-size: 16px;
+  color: #F0F0F0;
+  background: #000E90;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard #popUpAdd {
+  position: fixed;
+  z-index: 99;
+  top: 90px;
+  left: 70px;
+  background: rgba(0, 0, 0, 0.3);
+  width: calc(100% - 70px);
+  height: calc(100% - 90px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard #popUpAdd .modal {
+  position: relative;
+  width: 450px;
+  height: 320px;
+  background: #F0F0F0;
+  border-radius: 5px;
+  padding: 25px 20px;
+  -webkit-box-shadow: 0 0 12px -10px #1A1A1A;
+          box-shadow: 0 0 12px -10px #1A1A1A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpAdd .modal .title {
+  margin: 0;
+  height: 40px;
+  font-size: 18px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #BBBBBB;
+}
+
+body #dashboard #popUpAdd .modal .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+body #dashboard #popUpAdd .modal .close i {
+  font-size: 16px;
+}
+
+body #dashboard #popUpAdd .modal form {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 20px 10px 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #dashboard #popUpAdd .modal form .top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #dashboard #popUpAdd .modal form .top div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpAdd .modal form .top div:first-child {
+  width: 70%;
+}
+
+body #dashboard #popUpAdd .modal form .top div:last-child {
+  width: 25%;
+}
+
+body #dashboard #popUpAdd .modal form .bottom {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #dashboard #popUpAdd .modal form .bottom div {
+  width: 47.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpAdd .modal form label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 3px;
+  text-indent: 5px;
+}
+
+body #dashboard #popUpAdd .modal form select,
+body #dashboard #popUpAdd .modal form textarea,
+body #dashboard #popUpAdd .modal form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  resize: none;
+  -webkit-box-shadow: inset 0 0 6px 0px rgba(26, 26, 26, 0.25);
+          box-shadow: inset 0 0 6px 0px rgba(26, 26, 26, 0.25);
+}
+
+body #dashboard #popUpAdd .modal form select::-webkit-input-placeholder,
+body #dashboard #popUpAdd .modal form textarea::-webkit-input-placeholder,
+body #dashboard #popUpAdd .modal form input::-webkit-input-placeholder {
+  font-size: 12px;
+  font-weight: 500;
+  color: #BBBBBB;
+}
+
+body #dashboard #popUpAdd .modal form select:-ms-input-placeholder,
+body #dashboard #popUpAdd .modal form textarea:-ms-input-placeholder,
+body #dashboard #popUpAdd .modal form input:-ms-input-placeholder {
+  font-size: 12px;
+  font-weight: 500;
+  color: #BBBBBB;
+}
+
+body #dashboard #popUpAdd .modal form select::-ms-input-placeholder,
+body #dashboard #popUpAdd .modal form textarea::-ms-input-placeholder,
+body #dashboard #popUpAdd .modal form input::-ms-input-placeholder {
+  font-size: 12px;
+  font-weight: 500;
+  color: #BBBBBB;
+}
+
+body #dashboard #popUpAdd .modal form select::placeholder,
+body #dashboard #popUpAdd .modal form textarea::placeholder,
+body #dashboard #popUpAdd .modal form input::placeholder {
+  font-size: 12px;
+  font-weight: 500;
+  color: #BBBBBB;
+}
+
+body #dashboard #popUpAdd .modal form textarea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+body #dashboard #popUpAdd .modal form a {
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  margin-top: 10px;
+  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+  font-weight: 400;
+  font-size: 16px;
+  color: #F0F0F0;
+  background: #000E90;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard #popUpSend {
+  position: fixed;
+  z-index: 99;
+  top: 90px;
+  left: 70px;
+  background: rgba(0, 0, 0, 0.3);
+  width: calc(100% - 70px);
+  height: calc(100% - 90px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard #popUpSend .modal {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background: #F0F0F0;
+  border-radius: 5px;
+  padding: 25px 20px;
+  -webkit-box-shadow: 0 0 12px -10px #1A1A1A;
+          box-shadow: 0 0 12px -10px #1A1A1A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpSend .modal .title {
+  margin: 0;
+  height: 40px;
+  font-size: 18px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #BBBBBB;
+}
+
+body #dashboard #popUpSend .modal .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+body #dashboard #popUpSend .modal .close i {
+  font-size: 16px;
+}
+
+body #dashboard #popUpSend .modal img {
+  width: 80px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+body #dashboard #popUpSend .modal h1 {
+  margin-bottom: 40px;
+}
+
+body #dashboard #popUpSend .modal .button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  margin-top: 10px;
+  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+  font-weight: 400;
+  font-size: 16px;
+  color: #F0F0F0;
+  background: #000E90;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard #popUpConfirm {
+  position: fixed;
+  z-index: 99;
+  top: 90px;
+  left: 70px;
+  background: rgba(0, 0, 0, 0.3);
+  width: calc(100% - 70px);
+  height: calc(100% - 90px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard #popUpConfirm .modal {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background: #F0F0F0;
+  border-radius: 5px;
+  padding: 25px 20px;
+  -webkit-box-shadow: 0 0 12px -10px #1A1A1A;
+          box-shadow: 0 0 12px -10px #1A1A1A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpConfirm .modal .title {
+  margin: 0;
+  height: 40px;
+  font-size: 18px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #BBBBBB;
+}
+
+body #dashboard #popUpConfirm .modal .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+body #dashboard #popUpConfirm .modal .close i {
+  font-size: 16px;
+}
+
+body #dashboard #popUpConfirm .modal .prev {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpConfirm .modal .prev article {
+  padding: 10px;
+  height: 100%;
+  width: 33.33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpConfirm .modal .prev article p {
+  font-weight: 500;
+}
+
+body #dashboard #popUpConfirm .modal .prev article .softwares {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpConfirm .modal .prev article .softwares .software {
+  padding: 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpConfirm .modal .prev article .softwares .software img {
+  height: 16px;
+  margin-right: 8px;
+}
+
+body #dashboard #popUpConfirm .modal .prev article .softwares .software p {
+  height: 20px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+body #dashboard #popUpConfirm .modal .prev p {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+body #dashboard #popUpConfirm .modal .prev div {
+  height: 1px;
+  width: 100%;
+  background: #BBBBBB;
+}
+
+body #dashboard #popUpConfirm .modal .button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  margin-top: 10px;
+  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+  font-weight: 400;
+  font-size: 16px;
+  color: #F0F0F0;
+  background: #000E90;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=styles.css.map */
