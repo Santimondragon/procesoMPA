@@ -1724,5 +1724,238 @@ body {
                 }
             }
         }
+
+        #popUpSendTech {
+            position: fixed;
+            z-index: 99;
+            top: $height;
+            left: $width;
+            background: $overlay;
+            width: calc(100% - 70px);
+            height: calc(100% - 90px);
+
+            // FLEX
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+
+            .modal {
+                position: relative;
+                width: 800px;
+                height: 400px;
+                background: $white;
+                border-radius: 5px;
+                padding: 25px 20px;
+                box-shadow: 0 0 12px -10px $fontBlack;
+
+                // FLEX
+                display: flex;
+                flex-direction: column;
+                align-content: flex-start;
+                align-items: center;
+                justify-content: flex-start;
+
+                .title {
+                    margin: 0;
+                    height: 40px;
+                    font-size: 18px;
+                    padding-bottom: 15px;
+                    border-bottom: solid 1px $borderGray;
+                }
+
+                .close {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+
+                    i {
+                        font-size: 16px;
+                    }
+                }
+
+                .prev {
+                    flex: 1 1 auto;
+                    width: 100%;
+
+                    // FLEX
+                    display: flex;
+                    flex-direction: row;
+                    align-content: flex-start;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    article {
+                        padding: 10px;
+                        height: 100%;
+                        width: 33.33%;
+
+                        // FLEX
+                        display: flex;
+                        flex-direction: column;
+                        align-content: flex-start;
+                        align-items: center;
+                        justify-content: flex-start;
+
+                        p {
+                            font-weight: 500;
+                        }
+
+                        .softwares {
+                            flex: 1 1 auto;
+
+                            // FLEX
+                            display: flex;
+                            flex-direction: column;
+                            align-content: flex-start;
+                            align-items: center;
+                            justify-content: flex-start;
+
+                            .software {
+                                padding: 8px 0;
+
+                                // FLEX
+                                display: flex;
+                                flex-direction: row;
+                                align-content: flex-start;
+                                align-items: center;
+                                justify-content: flex-start;
+
+                                img {
+                                    height: 16px;
+                                    margin-right: 8px;
+                                }
+
+                                p {
+                                    height: 20px;
+                                    margin: 0;
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 10px;
+                        font-weight: 400;
+                    }
+
+                    div {
+                        height: 1px;
+                        width: 100%;
+                        background: $borderGray;
+                    }
+                }
+
+                .button {
+                    align-self: center;
+                    height: 40px;
+                    width: 120px;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    box-shadow: 0 0 12px -6px $shadow;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: $white;
+                    background: $blue;
+                    cursor: pointer;
+
+                    // FLEX
+                    display: flex;
+                    flex-direction: column;
+                    align-content: center;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+        #popUpSendTechDone {
+            position: fixed;
+            z-index: 99;
+            top: $height;
+            left: $width;
+            background: $overlay;
+            width: calc(100% - 70px);
+            height: calc(100% - 90px);
+
+            // FLEX
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+
+            .modal {
+                position: relative;
+                width: 800px;
+                height: 400px;
+                background: $white;
+                border-radius: 5px;
+                padding: 25px 20px;
+                box-shadow: 0 0 12px -10px $fontBlack;
+
+                // FLEX
+                display: flex;
+                flex-direction: column;
+                align-content: flex-start;
+                align-items: center;
+                justify-content: flex-start;
+
+                .title {
+                    margin: 0;
+                    height: 40px;
+                    font-size: 18px;
+                    padding-bottom: 15px;
+                    border-bottom: solid 1px $borderGray;
+                }
+
+                .close {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+
+                    i {
+                        font-size: 16px;
+                    }
+                }
+
+                img {
+                    width: 80px;
+                    margin-top: 50px;
+                    margin-bottom: 40px;
+                }
+
+                h1 {
+                    margin-bottom: 40px;
+                }
+
+                .button {
+                    align-self: center;
+                    height: 40px;
+                    width: 120px;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    box-shadow: 0 0 12px -6px $shadow;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: $white;
+                    background: $blue;
+                    cursor: pointer;
+
+                    // FLEX
+                    display: flex;
+                    flex-direction: column;
+                    align-content: center;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+            }
+        }
     }
 }

@@ -78,29 +78,15 @@
     <section id="dashboard">
 
         <h1 class="title">Software para todos los Departamentos
-            <a href="allUpgradePopUp.html">Enviar</a>
+            <a href="#">Enviar</a>
         </h1>
 
         <article class="decision-4 techDelete">
             <h1 class="name">Eliminar</h1>
             <div class="separator"></div>
             <ul class="softwares">
-            </ul>
-        </article>
-
-        <article class="decision-4 techStay">
-            <h1 class="name">Mantener</h1>
-            <div class="separator"></div>
-            <ul class="softwares">
-            </ul>
-        </article>
-
-        <article class="decision-4 techUpgrade">
-            <h1 class="name">Actualizar</h1>
-            <div class="separator"></div>
-            <ul class="softwares">
                 <li class="software">
-                    <a href="allStay.html"><i class="fas fa-chevron-left leftArrow"></i></a>
+                    <a href="claseNoNecesito.html"><i class="fas fa-chevron-left leftArrow"></i></a>
                     <img src="../images/androidStudioIcon.png" alt="icon">
                     <p class="softName">Android Studio</p>
                     <p class="version">v. 9</p>
@@ -108,7 +94,7 @@
                         <span>3</span>
                         <i class="fas fa-sort-down"></i>
                     </span>
-                    <a href="allAdd.html"><i class="fas fa-chevron-right rightArrow"></i></a>
+                    <a href="allStay.html"><i class="fas fa-chevron-right rightArrow"></i></a>
                     <i class="fas fa-comment comment"></i>
                     <ul class="group">
                         <li>
@@ -131,12 +117,67 @@
             </ul>
         </article>
 
+        <article class="decision-4 techStay">
+            <h1 class="name">Mantener</h1>
+            <div class="separator"></div>
+            <ul class="softwares">
+            </ul>
+        </article>
+
+        <article class="decision-4 techUpgrade">
+            <h1 class="name">Actualizar</h1>
+            <div class="separator"></div>
+            <ul class="softwares">
+            </ul>
+        </article>
+
         <article class="decision-4 techAdd">
             <h1 class="name">Agregar</h1>
             <div class="separator"></div>
             <ul class="softwares">
             </ul>
         </article>
+
+        <section id="popUpSendTech">
+            <article class="modal">
+                <h1 class="title">Confirmación MPA</h1>
+                <a class="close" href="allDelete.html"><i class="fas fa-times"></i></a>
+                <section class="prev">
+                    <article>
+                        <p>Eliminar</p>
+                        <div></div>
+                        <ul class="softwares">
+                            <li class="software">
+                                <img src="../images/androidStudioIcon.png" alt="icon">
+                                <p>Android Studio</p>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article>
+                        <p>Mantener</p>
+                        <div></div>
+                        <ul class="softwares">
+                        </ul>
+                    </article>
+
+                    <article>
+                        <p>Actualizar</p>
+                        <div></div>
+                        <ul class="softwares">
+                        </ul>
+                    </article>
+
+                    <article>
+                        <p>Agregar</p>
+                        <div></div>
+                        <ul class="softwares">
+                        </ul>
+                    </article>
+                </section>
+                <a class="button" href="clasePopUpEnviar.html">Confirmar</a>
+            </article>
+        </section>
     </section>
 
     <script src="../js/main.js"></script>

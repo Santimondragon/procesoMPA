@@ -2258,4 +2258,328 @@ body #dashboard #popUpConfirm .modal .button {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+body #dashboard #popUpSendTech {
+  position: fixed;
+  z-index: 99;
+  top: 90px;
+  left: 70px;
+  background: rgba(0, 0, 0, 0.3);
+  width: calc(100% - 70px);
+  height: calc(100% - 90px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard #popUpSendTech .modal {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  background: #F0F0F0;
+  border-radius: 5px;
+  padding: 25px 20px;
+  -webkit-box-shadow: 0 0 12px -10px #1A1A1A;
+          box-shadow: 0 0 12px -10px #1A1A1A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpSendTech .modal .title {
+  margin: 0;
+  height: 40px;
+  font-size: 18px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #BBBBBB;
+}
+
+body #dashboard #popUpSendTech .modal .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+body #dashboard #popUpSendTech .modal .close i {
+  font-size: 16px;
+}
+
+body #dashboard #popUpSendTech .modal .prev {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpSendTech .modal .prev article {
+  padding: 10px;
+  height: 100%;
+  width: 33.33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpSendTech .modal .prev article p {
+  font-weight: 500;
+}
+
+body #dashboard #popUpSendTech .modal .prev article .softwares {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpSendTech .modal .prev article .softwares .software {
+  padding: 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpSendTech .modal .prev article .softwares .software img {
+  height: 16px;
+  margin-right: 8px;
+}
+
+body #dashboard #popUpSendTech .modal .prev article .softwares .software p {
+  height: 20px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+body #dashboard #popUpSendTech .modal .prev p {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+body #dashboard #popUpSendTech .modal .prev div {
+  height: 1px;
+  width: 100%;
+  background: #BBBBBB;
+}
+
+body #dashboard #popUpSendTech .modal .button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  margin-top: 10px;
+  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+  font-weight: 400;
+  font-size: 16px;
+  color: #F0F0F0;
+  background: #000E90;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard #popUpSendTechDone {
+  position: fixed;
+  z-index: 99;
+  top: 90px;
+  left: 70px;
+  background: rgba(0, 0, 0, 0.3);
+  width: calc(100% - 70px);
+  height: calc(100% - 90px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard #popUpSendTechDone .modal {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  background: #F0F0F0;
+  border-radius: 5px;
+  padding: 25px 20px;
+  -webkit-box-shadow: 0 0 12px -10px #1A1A1A;
+          box-shadow: 0 0 12px -10px #1A1A1A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpSendTechDone .modal .title {
+  margin: 0;
+  height: 40px;
+  font-size: 18px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #BBBBBB;
+}
+
+body #dashboard #popUpSendTechDone .modal .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+body #dashboard #popUpSendTechDone .modal .close i {
+  font-size: 16px;
+}
+
+body #dashboard #popUpSendTechDone .modal img {
+  width: 80px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+body #dashboard #popUpSendTechDone .modal h1 {
+  margin-bottom: 40px;
+}
+
+body #dashboard #popUpSendTechDone .modal .button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  margin-top: 10px;
+  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+  font-weight: 400;
+  font-size: 16px;
+  color: #F0F0F0;
+  background: #000E90;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 /*# sourceMappingURL=styles.css.map */
