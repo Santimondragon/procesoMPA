@@ -27,6 +27,7 @@ $width: 70px;
     list-style: none;
     scroll-behavior: smooth;
     letter-spacing: 0.03em;
+    user-select: none;
 
     &::-webkit-scrollbar-track {
         background-color: none;
@@ -73,6 +74,7 @@ body {
         align-content: center;
         align-items: center;
         justify-content: space-evenly;
+        overflow: hidden;
 
         div {
             display: flex;
@@ -82,11 +84,22 @@ body {
             justify-content: space-evenly;
             width: 800px;
             height: 200px;
-            border-style: solid;
-            border-color: $borderGray;
+            border: solid 1px $darkBlue;
+            background: $white;
             border-radius: 5px;
             margin: 10px;
             text-align: center;
+            box-shadow: 0px 3px 8px -3px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+
+            &:hover {
+                box-shadow: 0px 8px 16px -5px rgba(0, 0, 0, 0.5);
+                transform: scale(1.2);
+                transition-duration: 1s;
+                transition-timing-function: ease-in-out;
+                position: relative;
+
+            }
 
             h2 {
                 font-size: 18px;
@@ -99,20 +112,16 @@ body {
                 color: white;
                 font-size: 14px;
                 border-radius: 5px;
+                border: solid 3px $darkBlue;
+
+                &:hover {
+                    background: $white;
+                    color: $darkBlue;
+                    font-weight: 500;
+                    border: solid 3px $darkBlue;
+                    border-style: solid;
+                }
             }
-        }
-
-        div:hover {
-            border-width: 4px;
-
-            a {
-                background: $white;
-                color: $darkBlue;
-                font-weight: 500;
-                border-color: $darkBlue;
-                border-style: solid;
-            }
-
         }
     }
 
@@ -192,43 +201,43 @@ body {
                     background: $white;
                     box-shadow: 0 0 12px -6px $shadow;
                     border-radius: 5px;
-    
+
                     // FLEX
                     display: none;
                     flex-direction: column;
                     align-content: flex-start;
                     align-items: flex-start;
                     justify-content: flex-start;
-    
+
                     .notification {
                         padding: 10px 5px;
                         width: 100%;
                         border-bottom: solid 1px $lightGray;
-    
+
                         // FLEX
                         display: flex;
                         flex-direction: row;
                         align-content: flex-start;
                         align-items: flex-start;
                         justify-content: flex-start;
-    
+
                         img {
                             width: 50px;
                             margin-right: 20px;
                         }
-    
+
                         p {
                             flex: 1 1 auto;
                             font-size: 13px;
                             font-weight: 400;
                             color: $gray;
                         }
-    
+
                         a {
                             font-size: 11px;
                             color: $borderGray;
                         }
-    
+
                         &:first-child {
                             border-top: solid 1px $lightGray;
                         }
@@ -240,7 +249,7 @@ body {
                         display: flex;
                     }
                 }
-            }    
+            }
         }
 
         .name {
@@ -338,6 +347,7 @@ body {
             width: 100%;
             margin-top: 20px;
             height: 30px;
+            position: relative;
 
             // FLEX
             display: flex;
@@ -345,6 +355,29 @@ body {
             align-content: center;
             align-items: center;
             justify-content: center;
+
+            a {
+                position: absolute;
+                right: 0;
+                height: 40px;
+                width: 120px;
+                border-radius: 5px;
+                font-weight: 400;
+                font-size: 16px;
+                box-shadow: 0 0 12px -6px $shadow;
+                color: $white;
+                background: $blue;
+                cursor: pointer;
+
+
+
+                // FLEX
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+            }
         }
 
         .class {
@@ -433,6 +466,10 @@ body {
                     font-size: 15px;
                     font-weight: 700;
                     margin-left: 20px;
+
+                    b {
+                        font-weight: 400;
+                    }
                 }
             }
 
@@ -487,10 +524,10 @@ body {
             justify-content: flex-start;
 
             .name {
-                font-size: 22px;
+                font-size: 20px;
                 font-weight: 500;
                 width: 100%;
-                height: 30px;
+                height: 26px;
                 margin-bottom: 15px;
 
                 // FLEX
@@ -515,7 +552,7 @@ body {
                 .software {
                     width: 100%;
                     border-bottom: solid 1px $lightGray;
-                    padding: 15px 10px;
+                    padding: 15px 5px;
                     // FLEX
                     display: flex;
                     flex-wrap: nowrap;
@@ -659,6 +696,519 @@ body {
                         color: $white;
                         background: $blue;
                         cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .decision-4 {
+            position: relative;
+            background: $white;
+            width: calc(25% - 20px);
+            margin: 20px 0 0 20px;
+            height: calc(100% - 70px);
+            border-radius: 5px;
+            box-shadow: 0 0 12px -6px $shadow;
+            padding: 20px 15px;
+            min-width: 280px;
+            min-height: 400px;
+
+            // FLEX
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            justify-content: flex-start;
+
+            .name {
+                font-size: 20px;
+                font-weight: 500;
+                width: 100%;
+                height: 26px;
+                margin-bottom: 15px;
+
+                // FLEX
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .separator {
+                height: 1px;
+                width: 100%;
+                background: $borderGray;
+            }
+
+            .softwares {
+                width: 100%;
+                flex: 1 1 auto;
+
+                .software {
+                    width: 100%;
+                    border-bottom: solid 1px $lightGray;
+                    padding: 15px 5px;
+                    position: relative;
+
+                    // FLEX
+                    display: flex;
+                    flex-wrap: nowrap;
+                    flex-direction: row;
+                    align-content: center;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    i {
+                        font-size: 15px;
+                    }
+
+                    .leftArrow {
+                        margin-right: 15px;
+                    }
+
+                    img {
+                        width: 22px;
+                    }
+
+                    .softName {
+                        flex: 0 1 50%;
+                    }
+
+                    .version {
+                        font-size: 14px;
+                        font-style: italic;
+                        color: $gray;
+                        display: none;
+                    }
+
+                    .amount {
+                        width: 35px;
+                        height: 20px;
+                        border-radius: 10px;
+                        background: $blue;
+
+                        // FLEX
+                        display: flex;
+                        flex-wrap: nowrap;
+                        flex-direction: row;
+                        align-content: center;
+                        align-items: center;
+                        justify-content: space-evenly;
+
+                        span,
+                        i {
+                            color: $white;
+                            font-size: 12px;
+                        }
+
+                        span {
+                            font-weight: 500;
+                            margin-left: 3px;
+                        }
+
+                        i {
+                            margin-top: -4px;
+                        }
+                    }
+
+                    .rightArrow {
+                        margin-left: 15px;
+                    }
+
+                    .comment {
+                        display: none;
+                    }
+                }
+            }
+
+            .buttonHolder {
+                flex: 0 1 15%;
+                width: 100%;
+
+                // FLEX
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                justify-content: flex-start;
+
+                a {
+                    align-self: center;
+                    height: 40px;
+                    width: 120px;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: $gray;
+                    background: $borderGray;
+                    cursor: progress;
+
+                    // FLEX
+                    display: flex;
+                    flex-direction: column;
+                    align-content: center;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                &.done {
+                    a {
+                        box-shadow: 0 0 12px -6px $shadow;
+                        color: $white;
+                        background: $blue;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &.notNeeded {
+                .softwares {
+                    .software {
+                        .softName {
+                            flex: 0 1 65%;
+                        }
+
+                        .leftArrow {
+                            display: none;
+                        }
+
+                        .comment {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &.needed {
+                .softwares {
+                    .software {
+                        .softName {
+                            flex: 0 1 52%;
+                        }
+
+                        .rightArrow {
+                            display: none;
+                        }
+
+                        .comment {
+                            display: flex;
+                            margin-right: 2%;
+                            margin-left: 4%;
+
+                            &.empty {
+                                i {
+                                    font-size: 17px;
+                                    color: $borderGray;
+
+                                }
+                            }
+
+                            &.filled {
+                                i {
+                                    font-size: 17px;
+                                    color: $darkBlue;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .buttonHolder {
+                    flex: 0 1 15%;
+                    width: 100%;
+
+                    a {
+                        width: 140px;
+                        box-shadow: 0 0 12px -6px $shadow;
+                        color: $white;
+                        background: $blue;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &.techDelete {
+                .softwares {
+                    .software {
+                        .softName {
+                            flex: 0 1 52%;
+                        }
+
+                        .leftArrow {
+                            display: none;
+                        }
+
+                        .group {
+                            width: 100%;
+                            padding: 5px 12px;
+                            position: absolute;
+                            top: 100%;
+                            border-bottom: solid 1px $lightGray;
+
+                            // FLEX
+                            display: flex;
+                            flex-direction: column;
+                            align-content: center;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            li {
+                                width: 100%;
+                                padding: 8px 0;
+
+                                // FLEX
+                                display: flex;
+                                flex-direction: row;
+                                align-content: center;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                .department {
+                                    font-size: 13px;
+                                    font-weight: 500;
+                                    flex: 0 1 60%;
+                                }
+
+                                .version {
+                                    display: block;
+                                    font-size: 13px;
+                                }
+
+                                .comment {
+                                    display: block;
+                                    font-size: 14px;
+                                    color: $borderGray;
+                                    cursor: default;
+
+                                    &:hover {
+                                        color: $borderGray;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.techStay {
+                .softwares {
+                    .software {
+                        .softName {
+                            flex: 0 1 52%;
+                        }
+
+                        .group {
+                            width: 100%;
+                            padding: 5px 12px;
+                            position: absolute;
+                            top: 100%;
+                            border-bottom: solid 1px $lightGray;
+
+                            // FLEX
+                            display: flex;
+                            flex-direction: column;
+                            align-content: center;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            li {
+                                width: 100%;
+                                padding: 8px 0;
+
+                                // FLEX
+                                display: flex;
+                                flex-direction: row;
+                                align-content: center;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                .department {
+                                    font-size: 13px;
+                                    font-weight: 500;
+                                    flex: 0 1 60%;
+                                }
+
+                                .version {
+                                    display: block;
+                                    font-size: 13px;
+                                }
+
+                                .comment {
+                                    display: block;
+                                    font-size: 14px;
+                                    color: $gray;
+                                    cursor: pointer;
+                                    position: relative;
+
+                                    .reason {
+                                        position: absolute;
+                                        left: 120%;
+                                        top: -30px;
+                                        padding: 6px 12px;
+                                        z-index: 99;
+                                        background: $white;
+                                        box-shadow: 0 0 12px -10px $fontBlack;
+                                        width: 160px;
+                                        height: 110px;
+
+                                        // FLEX
+                                        display: none;
+                                        flex-direction: column;
+                                        align-content: center;
+                                        align-items: center;
+                                        justify-content: flex-start;
+
+                                        .title {
+                                            width: 100%;
+                                            border-bottom: solid 1px $borderGray;
+                                            margin: 0px;
+                                            padding: 12px;
+                                            font-weight: 500;
+                                        }
+
+                                        .content {
+                                            flex: 1 1 auto;
+                                            padding: 12px;
+                                            font-weight: 400;
+                                            text-align: center;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        color: $darkBlue;
+
+                                        .reason {
+                                            display: flex;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.techUpgrade {
+                .softwares {
+                    .software {
+                        .softName {
+                            flex: 0 1 52%;
+                        }
+
+                        .group {
+                            width: 100%;
+                            padding: 5px 12px;
+                            position: absolute;
+                            top: 100%;
+                            border-bottom: solid 1px $lightGray;
+
+                            // FLEX
+                            display: flex;
+                            flex-direction: column;
+                            align-content: center;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            li {
+                                width: 100%;
+                                padding: 8px 0;
+
+                                // FLEX
+                                display: flex;
+                                flex-direction: row;
+                                align-content: center;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                .department {
+                                    font-size: 13px;
+                                    font-weight: 500;
+                                    flex: 0 1 60%;
+                                }
+
+                                .version {
+                                    display: block;
+                                    font-size: 13px;
+                                }
+
+                                .comment {
+                                    display: block;
+                                    font-size: 14px;
+                                    color: $borderGray;
+                                    cursor: default;
+
+                                    &:hover {
+                                        color: $borderGray;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.techAdd {
+                .softwares {
+                    .software {
+                        .softName {
+                            flex: 0 1 52%;
+                        }
+
+                        .rightArrow {
+                            display: none;
+                        }
+
+                        .group {
+                            width: 100%;
+                            padding: 5px 12px;
+                            position: absolute;
+                            top: 100%;
+                            border-bottom: solid 1px $lightGray;
+
+                            // FLEX
+                            display: flex;
+                            flex-direction: column;
+                            align-content: center;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            li {
+                                width: 100%;
+                                padding: 8px 0;
+
+                                // FLEX
+                                display: flex;
+                                flex-direction: row;
+                                align-content: center;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                .department {
+                                    font-size: 13px;
+                                    font-weight: 500;
+                                    flex: 0 1 60%;
+                                }
+
+                                .version {
+                                    display: block;
+                                    font-size: 13px;
+                                }
+
+                                .comment {
+                                    display: block;
+                                    font-size: 14px;
+                                    color: $borderGray;
+                                    cursor: default;
+
+                                    &:hover {
+                                        color: $borderGray;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

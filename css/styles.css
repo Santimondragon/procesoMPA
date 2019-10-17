@@ -14,6 +14,10 @@
   list-style: none;
   scroll-behavior: smooth;
   letter-spacing: 0.03em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 *::-webkit-scrollbar-track {
@@ -68,6 +72,7 @@ body .prototipos {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  overflow: hidden;
 }
 
 body .prototipos div {
@@ -88,11 +93,26 @@ body .prototipos div {
           justify-content: space-evenly;
   width: 800px;
   height: 200px;
-  border-style: solid;
-  border-color: #BBBBBB;
+  border: solid 1px #000641;
+  background: #F0F0F0;
   border-radius: 5px;
   margin: 10px;
   text-align: center;
+  -webkit-box-shadow: 0px 3px 8px -3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 3px 8px -3px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+body .prototipos div:hover {
+  -webkit-box-shadow: 0px 8px 16px -5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 8px 16px -5px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  position: relative;
 }
 
 body .prototipos div h2 {
@@ -106,17 +126,14 @@ body .prototipos div a {
   color: white;
   font-size: 14px;
   border-radius: 5px;
+  border: solid 3px #000641;
 }
 
-body .prototipos div:hover {
-  border-width: 4px;
-}
-
-body .prototipos div:hover a {
+body .prototipos div a:hover {
   background: #F0F0F0;
   color: #000641;
   font-weight: 500;
-  border-color: #000641;
+  border: solid 3px #000641;
   border-style: solid;
 }
 
@@ -419,6 +436,7 @@ body #dashboard .title {
   width: 100%;
   margin-top: 20px;
   height: 30px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,6 +444,36 @@ body #dashboard .title {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard .title a {
+  position: absolute;
+  right: 0;
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+  color: #F0F0F0;
+  background: #000E90;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-align: center;
@@ -554,6 +602,10 @@ body #dashboard .class .progress .message {
   margin-left: 20px;
 }
 
+body #dashboard .class .progress .message b {
+  font-weight: 400;
+}
+
 body #dashboard .class .information {
   position: absolute;
   max-height: 70x;
@@ -623,10 +675,10 @@ body #dashboard .decision {
 }
 
 body #dashboard .decision .name {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   width: 100%;
-  height: 30px;
+  height: 26px;
   margin-bottom: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -663,7 +715,7 @@ body #dashboard .decision .softwares {
 body #dashboard .decision .softwares .software {
   width: 100%;
   border-bottom: solid 1px #E7E7E7;
-  padding: 15px 10px;
+  padding: 15px 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -830,6 +882,636 @@ body #dashboard .decision.needed .buttonHolder a {
   color: #F0F0F0;
   background: #000E90;
   cursor: pointer;
+}
+
+body #dashboard .decision-4 {
+  position: relative;
+  background: #F0F0F0;
+  width: calc(25% - 20px);
+  margin: 20px 0 0 20px;
+  height: calc(100% - 70px);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+  padding: 20px 15px;
+  min-width: 280px;
+  min-height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard .decision-4 .name {
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+  height: 26px;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard .decision-4 .separator {
+  height: 1px;
+  width: 100%;
+  background: #BBBBBB;
+}
+
+body #dashboard .decision-4 .softwares {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+body #dashboard .decision-4 .softwares .software {
+  width: 100%;
+  border-bottom: solid 1px #E7E7E7;
+  padding: 15px 5px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #dashboard .decision-4 .softwares .software i {
+  font-size: 15px;
+}
+
+body #dashboard .decision-4 .softwares .software .leftArrow {
+  margin-right: 15px;
+}
+
+body #dashboard .decision-4 .softwares .software img {
+  width: 22px;
+}
+
+body #dashboard .decision-4 .softwares .software .softName {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+body #dashboard .decision-4 .softwares .software .version {
+  font-size: 14px;
+  font-style: italic;
+  color: #777777;
+  display: none;
+}
+
+body #dashboard .decision-4 .softwares .software .amount {
+  width: 35px;
+  height: 20px;
+  border-radius: 10px;
+  background: #000E90;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body #dashboard .decision-4 .softwares .software .amount span,
+body #dashboard .decision-4 .softwares .software .amount i {
+  color: #F0F0F0;
+  font-size: 12px;
+}
+
+body #dashboard .decision-4 .softwares .software .amount span {
+  font-weight: 500;
+  margin-left: 3px;
+}
+
+body #dashboard .decision-4 .softwares .software .amount i {
+  margin-top: -4px;
+}
+
+body #dashboard .decision-4 .softwares .software .rightArrow {
+  margin-left: 15px;
+}
+
+body #dashboard .decision-4 .softwares .software .comment {
+  display: none;
+}
+
+body #dashboard .decision-4 .buttonHolder {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 15%;
+          flex: 0 1 15%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard .decision-4 .buttonHolder a {
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #777777;
+  background: #BBBBBB;
+  cursor: progress;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard .decision-4 .buttonHolder.done a {
+  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+  color: #F0F0F0;
+  background: #000E90;
+  cursor: pointer;
+}
+
+body #dashboard .decision-4.notNeeded .softwares .software .softName {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 65%;
+          flex: 0 1 65%;
+}
+
+body #dashboard .decision-4.notNeeded .softwares .software .leftArrow {
+  display: none;
+}
+
+body #dashboard .decision-4.notNeeded .softwares .software .comment {
+  display: none;
+}
+
+body #dashboard .decision-4.needed .softwares .software .softName {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 52%;
+          flex: 0 1 52%;
+}
+
+body #dashboard .decision-4.needed .softwares .software .rightArrow {
+  display: none;
+}
+
+body #dashboard .decision-4.needed .softwares .software .comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 2%;
+  margin-left: 4%;
+}
+
+body #dashboard .decision-4.needed .softwares .software .comment.empty i {
+  font-size: 17px;
+  color: #BBBBBB;
+}
+
+body #dashboard .decision-4.needed .softwares .software .comment.filled i {
+  font-size: 17px;
+  color: #000641;
+}
+
+body #dashboard .decision-4.needed .buttonHolder {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 15%;
+          flex: 0 1 15%;
+  width: 100%;
+}
+
+body #dashboard .decision-4.needed .buttonHolder a {
+  width: 140px;
+  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+  color: #F0F0F0;
+  background: #000E90;
+  cursor: pointer;
+}
+
+body #dashboard .decision-4.techDelete .softwares .software .softName {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 52%;
+          flex: 0 1 52%;
+}
+
+body #dashboard .decision-4.techDelete .softwares .software .leftArrow {
+  display: none;
+}
+
+body #dashboard .decision-4.techDelete .softwares .software .group {
+  width: 100%;
+  padding: 5px 12px;
+  position: absolute;
+  top: 100%;
+  border-bottom: solid 1px #E7E7E7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #dashboard .decision-4.techDelete .softwares .software .group li {
+  width: 100%;
+  padding: 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #dashboard .decision-4.techDelete .softwares .software .group li .department {
+  font-size: 13px;
+  font-weight: 500;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+}
+
+body #dashboard .decision-4.techDelete .softwares .software .group li .version {
+  display: block;
+  font-size: 13px;
+}
+
+body #dashboard .decision-4.techDelete .softwares .software .group li .comment {
+  display: block;
+  font-size: 14px;
+  color: #BBBBBB;
+  cursor: default;
+}
+
+body #dashboard .decision-4.techDelete .softwares .software .group li .comment:hover {
+  color: #BBBBBB;
+}
+
+body #dashboard .decision-4.techStay .softwares .software .softName {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 52%;
+          flex: 0 1 52%;
+}
+
+body #dashboard .decision-4.techStay .softwares .software .group {
+  width: 100%;
+  padding: 5px 12px;
+  position: absolute;
+  top: 100%;
+  border-bottom: solid 1px #E7E7E7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #dashboard .decision-4.techStay .softwares .software .group li {
+  width: 100%;
+  padding: 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #dashboard .decision-4.techStay .softwares .software .group li .department {
+  font-size: 13px;
+  font-weight: 500;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+}
+
+body #dashboard .decision-4.techStay .softwares .software .group li .version {
+  display: block;
+  font-size: 13px;
+}
+
+body #dashboard .decision-4.techStay .softwares .software .group li .comment {
+  display: block;
+  font-size: 14px;
+  color: #777777;
+  cursor: pointer;
+  position: relative;
+}
+
+body #dashboard .decision-4.techStay .softwares .software .group li .comment .reason {
+  position: absolute;
+  left: 120%;
+  top: -30px;
+  padding: 6px 12px;
+  z-index: 99;
+  background: #F0F0F0;
+  -webkit-box-shadow: 0 0 12px -10px #1A1A1A;
+          box-shadow: 0 0 12px -10px #1A1A1A;
+  width: 160px;
+  height: 110px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard .decision-4.techStay .softwares .software .group li .comment .reason .title {
+  width: 100%;
+  border-bottom: solid 1px #BBBBBB;
+  margin: 0px;
+  padding: 12px;
+  font-weight: 500;
+}
+
+body #dashboard .decision-4.techStay .softwares .software .group li .comment .reason .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 12px;
+  font-weight: 400;
+  text-align: center;
+}
+
+body #dashboard .decision-4.techStay .softwares .software .group li .comment:hover {
+  color: #000641;
+}
+
+body #dashboard .decision-4.techStay .softwares .software .group li .comment:hover .reason {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #dashboard .decision-4.techUpgrade .softwares .software .softName {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 52%;
+          flex: 0 1 52%;
+}
+
+body #dashboard .decision-4.techUpgrade .softwares .software .group {
+  width: 100%;
+  padding: 5px 12px;
+  position: absolute;
+  top: 100%;
+  border-bottom: solid 1px #E7E7E7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #dashboard .decision-4.techUpgrade .softwares .software .group li {
+  width: 100%;
+  padding: 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #dashboard .decision-4.techUpgrade .softwares .software .group li .department {
+  font-size: 13px;
+  font-weight: 500;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+}
+
+body #dashboard .decision-4.techUpgrade .softwares .software .group li .version {
+  display: block;
+  font-size: 13px;
+}
+
+body #dashboard .decision-4.techUpgrade .softwares .software .group li .comment {
+  display: block;
+  font-size: 14px;
+  color: #BBBBBB;
+  cursor: default;
+}
+
+body #dashboard .decision-4.techUpgrade .softwares .software .group li .comment:hover {
+  color: #BBBBBB;
+}
+
+body #dashboard .decision-4.techAdd .softwares .software .softName {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 52%;
+          flex: 0 1 52%;
+}
+
+body #dashboard .decision-4.techAdd .softwares .software .rightArrow {
+  display: none;
+}
+
+body #dashboard .decision-4.techAdd .softwares .software .group {
+  width: 100%;
+  padding: 5px 12px;
+  position: absolute;
+  top: 100%;
+  border-bottom: solid 1px #E7E7E7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #dashboard .decision-4.techAdd .softwares .software .group li {
+  width: 100%;
+  padding: 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #dashboard .decision-4.techAdd .softwares .software .group li .department {
+  font-size: 13px;
+  font-weight: 500;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+}
+
+body #dashboard .decision-4.techAdd .softwares .software .group li .version {
+  display: block;
+  font-size: 13px;
+}
+
+body #dashboard .decision-4.techAdd .softwares .software .group li .comment {
+  display: block;
+  font-size: 14px;
+  color: #BBBBBB;
+  cursor: default;
+}
+
+body #dashboard .decision-4.techAdd .softwares .software .group li .comment:hover {
+  color: #BBBBBB;
 }
 
 body #dashboard #popUpComment {

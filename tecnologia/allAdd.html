@@ -18,7 +18,7 @@
 
 <body>
     <section class="topBar">
-        <h1 class="name">Jose Andrés Moncada</h1>
+        <h1 class="name">Coordinador de Tecnología</h1>
         <div class="actions">
             <i class="fas fa-cog settings"></i>
             <i class="fas fa-bell notifications">
@@ -59,17 +59,16 @@
                 </ul>
             </i>
         </div>
-        <img src="../images/pp.png" alt="pp" class="profile">
-
+        <img src="../images/ppTecnologia.png" alt="pp" class="profile">
     </section>
 
     <section id="sideBar">
         <i class="fas fa-bars"></i>
         <ul class="menu">
-            <a href="home.html" class="item selected">
+            <a href="home.html" class="item">
                 <i class="fas fa-university"></i>
             </a>
-            <a href="departamento.html" class="item">
+            <a href="allDelete.html" class="item selected">
                 <i class="fas fa-book"></i>
             </a>
         </ul>
@@ -77,39 +76,70 @@
     </section>
 
     <section id="dashboard">
-        <a href="departamento.html" class="class">
-            <article class="progress">
-                <div class="percentage">
-                    <div class="fill a"></div>
-                    <div class="percentageValue">100%</div>
-                </div>
-                <p class="message">Completado</p>
-            </article>
 
-            <article class="information">
-                <p class="name">Departamento de Diseño</p>
-                <p class="other">Proyecto de Grado I</p>
-                <p class="other">Proyecto de Grado II</p>
-            </article>
-        </a>
+        <h1 class="title">Software para todos los Departamentos
+            <a href="#">Enviar</a>
+        </h1>
 
-        <a href="departamento.html" class="class">
-            <article class="progress">
-                <div class="percentage">
-                    <div class="fill b"></div>
-                    <div class="percentageValue">50%</div>
-                </div>
-                <p class="message">Completado</p>
-            </article>
+        <article class="decision-4 techDelete">
+            <h1 class="name">Eliminar</h1>
+            <div class="separator"></div>
+            <ul class="softwares">
+            </ul>
+        </article>
 
-            <article class="information">
-                <p class="name">Departamento de TICS</p>
-                <p class="other">Diseñenando con Algoritmos</p>
-                <p class="other">Ecosistemas de Aplicaciones</p>
-            </article>
-        </a>
+        <article class="decision-4 techStay">
+            <h1 class="name">Mantener</h1>
+            <div class="separator"></div>
+            <ul class="softwares">
+            </ul>
+        </article>
+
+        <article class="decision-4 techUpgrade">
+            <h1 class="name">Actualizar</h1>
+            <div class="separator"></div>
+            <ul class="softwares">
+            </ul>
+        </article>
+
+        <article class="decision-4 techAdd">
+            <h1 class="name">Agregar</h1>
+            <div class="separator"></div>
+            <ul class="softwares">
+                <li class="software">
+                    <a href="allUpgrade.html"><i class="fas fa-chevron-left leftArrow"></i></a>
+                    <img src="../images/androidStudioIcon.png" alt="icon">
+                    <p class="softName">Android Studio</p>
+                    <p class="version">v. 9</p>
+                    <span class="amount">
+                        <span>3</span>
+                        <i class="fas fa-sort-down"></i>
+                    </span>
+                    <a href="allStay.html"><i class="fas fa-chevron-right rightArrow"></i></a>
+                    <i class="fas fa-comment comment"></i>
+                    <ul class="group">
+                        <li>
+                            <span class="department">D. de Diseño</span>
+                            <span class="version">v 3.3.5</span>
+                            <i class="fas fa-comment comment"></i>
+                        </li>
+                        <li>
+                            <span class="department">D. de TICS</span>
+                            <span class="version">v 3.3.5</span>
+                            <i class="fas fa-comment comment"></i>
+                        </li>
+                        <li>
+                            <span class="department">D. de C. Naturales</span>
+                            <span class="version">v 3.3.5</span>
+                            <i class="fas fa-comment comment"></i>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </article>
     </section>
 
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
