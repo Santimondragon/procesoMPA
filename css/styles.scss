@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap');
 
-$blue: #000E90;
+$lightBlue: #e9ecf8;
+$darkBlue: #1E3374;
+$blue: #2e4798;
 $green: #00C55A;
-$red: #FF1E00;
-$darkBlue: #000641;
+$red: #c81900;
+$yellow: #f5c903;
 $fontBlack: #1A1A1A;
 $shadow: rgba(26, 26, 26, 0.25);
 $overlay: rgba(0, 0, 0, 0.3);
 $borderGray: #BBBBBB;
 $gray: #777777;
 $lightGray: #E7E7E7;
-$white: #F0F0F0;
-$height: 90px;
-$width: 70px;
+$white: rgb(245, 245, 245);
+$height: 60px;
+$width: 55px;
+$menuItemSize: $width - 5px;
 
 * {
     box-sizing: border-box;
@@ -44,11 +47,10 @@ $width: 70px;
 }
 
 i {
-    color: $gray;
-    font-size: 24px;
+    color: $lightBlue;
+    font-size: 20px;
 
     &:hover {
-        color: $darkBlue;
         cursor: pointer;
     }
 }
@@ -56,7 +58,7 @@ i {
 body {
     width: 100vw;
     height: 100vh;
-    background: $lightGray;
+    background: $white;
     position: relative;
 
     #titulo {
@@ -126,7 +128,7 @@ body {
     }
 
     .topBar {
-        background: $white;
+        background: $blue;
         position: fixed;
         z-index: 99;
         top: 0;
@@ -134,7 +136,9 @@ body {
         width: 100vw;
         height: $height;
         box-shadow: 0 0 12px -10px $shadow;
-        padding: 20px 30px;
+        padding: 20px 10px 20px 30px;
+        border-radius: 0 0 15px 0;
+
 
         // FLEX
         display: flex;
@@ -144,14 +148,19 @@ body {
         justify-content: flex-end;
 
         .profile {
-            height: 100%;
+            height: 52px;
+            width: 52px;
             border-radius: 100%;
             cursor: pointer;
+            border: solid 8px $blue;
 
+            &:hover {
+                border: solid 8px $darkBlue;
+            }
         }
 
         .actions {
-            margin-right: 50px;
+            margin-right: 7px;
             width: 70px;
             position: relative;
 
@@ -163,18 +172,25 @@ body {
             justify-content: space-around;
 
             i {
-                font-size: 18px;
+                font-size: 14px;
+                padding: 10px;
                 position: relative;
+
+                &:hover {
+                    color: $white;
+                    background: $darkBlue;
+                    border-radius: 100%;
+                }
 
                 &::after {
                     content: "0";
                     position: absolute;
-                    top: -7px;
-                    right: -7px;
-                    width: 16px;
-                    height: 16px;
+                    top: 2px;
+                    right: 2px;
+                    width: 14px;
+                    height: 14px;
                     border-radius: 20px;
-                    background: $blue;
+                    background: $green;
                     color: $white;
                     font-size: 11px;
                     font-weight: 600;
@@ -253,15 +269,17 @@ body {
         }
 
         .name {
-            margin-right: 50px;
+            flex: 1 1 auto;
+            margin-left: 145px;
+            text-align: center;
             font-size: 20px;
             font-weight: 600;
-            color: $darkBlue;
+            color: $white;
         }
     }
 
     #sideBar {
-        background: $white;
+        background: $darkBlue;
         position: fixed;
         z-index: 99;
         top: 0;
@@ -269,7 +287,8 @@ body {
         width: $width;
         height: 100vh;
         box-shadow: 0 0 12px -10px $shadow;
-        padding: 30px 0;
+        padding: 20px 0;
+        border-radius: 0 0 15px 0;
 
         // GRID
         display: flex;
@@ -280,6 +299,7 @@ body {
 
         .menu {
             width: 100%;
+            padding: 0 0 0 5px;
             flex: 1 1 auto;
             // GRID
             display: flex;
@@ -289,12 +309,13 @@ body {
             justify-content: center;
 
             .item {
-                height: $width;
-                width: $width;
-                border-top: solid 1px $borderGray;
-                border-right: solid 3px rgba(0, 0, 0, 0);
-                border-left: solid 3px rgba(0, 0, 0, 0);
-                ;
+                background: $darkBlue;
+                border-radius: 15px 0 0 15px;
+                padding: 0 5px 0 0;
+                height: $menuItemSize;
+                width: $menuItemSize;
+                position: relative;
+                
 
                 // GRID
                 display: flex;
@@ -303,21 +324,47 @@ body {
                 align-items: center;
                 justify-content: center;
 
-                &:last-child {
-                    border-bottom: solid 1px $borderGray;
-                }
-
                 &:hover {
                     cursor: pointer;
+                    background: $blue;
 
                     i {
-                        color: $darkBlue;
+                        color: $white;
                     }
                 }
 
                 &.selected {
                     cursor: pointer;
-                    border-right: solid 3px $darkBlue;
+                    background: $white;
+                    color: $darkBlue;
+
+                    
+                    &::before {
+                        box-sizing: border-box;
+                        content: " ";
+                        position: absolute;
+                        background: $white;
+                        width: 15px;
+                        height: 15px;
+                        z-index: 2;
+                        bottom: -15px;
+                        right: 0px;
+                    }
+
+                    &::after {
+                        box-sizing: border-box;
+                        content: " ";
+                        position: absolute;
+                        background: $darkBlue;
+                        border-radius: 15px;
+                        width: 25px;
+                        height: 25px;
+                        z-index: 2;
+                        bottom: -25px;
+                        right: 0px;
+                    }
+
+                    
 
                     i {
                         color: $darkBlue;
@@ -356,6 +403,8 @@ body {
             align-items: center;
             justify-content: center;
 
+            display: none;
+
             a {
                 position: absolute;
                 right: 0;
@@ -382,33 +431,34 @@ body {
 
         .class {
             position: relative;
-            background: $white;
+            background: white;
             width: calc(33.33% - 20px);
             margin: 20px 0 0 20px;
             padding-top: 19.83%;
-            border-radius: 5px;
-            box-shadow: 0 0 12px -6px $shadow;
-            min-width: 300px;
-            min-height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 35px -20px $shadow;
+            min-width: 350px;
+            min-height: 220px;
 
             .progress {
                 position: absolute;
-                top: 20px;
-                left: 20px;
+                top: 15px;
+                left: 15px;
+                width: calc(100% - 30px);
 
                 // FLEX
                 display: flex;
                 flex-wrap: wrap;
-                flex-direction: row;
-                align-content: center;
-                align-items: center;
+                flex-direction: column;
+                align-content: flex-start;
+                align-items: flex-start;
                 justify-content: flex-start;
 
                 .percentage {
                     width: 60px;
                     height: 60px;
                     border-radius: 60px;
-                    background: $lightGray;
+                    background: $white;
                     position: relative;
                     overflow: hidden;
 
@@ -426,28 +476,13 @@ body {
                         bottom: 0;
                         left: 0;
                         z-index: 2;
-
-                        &.a {
-                            height: 100%;
-                            background: $green;
-                        }
-
-                        &.b {
-                            height: 50%;
-                            background: $red;
-                        }
-
-                        &.c {
-                            height: 0%;
-                            background: none;
-                        }
                     }
 
                     .percentageValue {
                         width: 50px;
                         height: 50px;
                         border-radius: 50px;
-                        background: $white;
+                        background: white;
                         font-weight: 700;
                         font-size: 15px;
                         z-index: 3;
@@ -465,7 +500,10 @@ body {
                 .message {
                     font-size: 15px;
                     font-weight: 700;
-                    margin-left: 20px;
+                    margin-top: 10px;
+                    position: absolute;
+                    top: -10px;
+                    right: 0;
 
                     b {
                         font-weight: 400;
@@ -502,14 +540,83 @@ body {
                     color: $gray;
                 }
             }
+            
+            &.aa {
+                .progress {
+                    .fill {
+                        height: 100%;
+                        background: $green;
+                    }
+                }
+                .message {
+                    color: $green;
+                }
+                &::before {
+                    content: " ";
+                    position: absolute;
+                    top: 0;
+                    height: 45px;
+                    width: 100%;
+                    background: rgb(205, 255, 225);
+                    border-bottom: solid 1px $green;
+                    z-index: 0;
+                    border-radius: 10px 10px 0 0;
+                }
+            }
+
+            &.bb {
+                .progress {
+                    .fill {
+                        height: 50%;
+                        background: $yellow;
+                    }
+                }
+                .message {
+                    color: $yellow;
+                }
+                &::before {
+                    content: " ";
+                    position: absolute;
+                    top: 0;
+                    height: 45px;
+                    width: 100%;
+                    background: rgb(255, 245, 190);
+                    border-bottom: solid 1px $yellow;
+                    z-index: 0;
+                    border-radius: 10px 10px 0 0;
+                }
+            }
+
+            &.cc {
+                .progress {
+                    .fill {
+                        height: 0%;
+                        background: $red;
+                    }
+                }
+                .message {
+                    color: $red;
+                }
+                &::before {
+                    content: " ";
+                    position: absolute;
+                    top: 0;
+                    height: 45px;
+                    width: 100%;
+                    background: rgb(255, 215, 215);
+                    border-bottom: solid 1px $red;
+                    z-index: 0;
+                    border-radius: 10px 10px 0 0;
+                }
+            }
         }
 
         .decision {
             position: relative;
-            background: $white;
+            background: $lightBlue;
             width: calc(33.33% - 20px);
             margin: 20px 0 0 20px;
-            height: calc(100% - 70px);
+            height: calc(100% - 20px);
             border-radius: 5px;
             box-shadow: 0 0 12px -6px $shadow;
             padding: 20px 15px;
@@ -563,6 +670,7 @@ body {
 
                     i {
                         font-size: 15px;
+                        color: $darkBlue;
                     }
 
                     .leftArrow {
@@ -635,6 +743,7 @@ body {
             }
 
             &.notNeeded {
+                background: $white;
                 .softwares {
                     .software {
                         .softName {
@@ -653,6 +762,7 @@ body {
             }
 
             &.needed {
+                background: $white;
                 .softwares {
                     .software {
                         .softName {
@@ -761,6 +871,7 @@ body {
                     justify-content: space-between;
 
                     i {
+                        color: $darkBlue;
                         font-size: 15px;
                     }
 

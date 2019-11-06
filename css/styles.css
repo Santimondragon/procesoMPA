@@ -30,23 +30,22 @@
 }
 
 *::-webkit-scrollbar-thumb:vertical {
-  background-color: #000641;
+  background-color: #1E3374;
 }
 
 i {
-  color: #777777;
-  font-size: 24px;
+  color: #e9ecf8;
+  font-size: 20px;
 }
 
 i:hover {
-  color: #000641;
   cursor: pointer;
 }
 
 body {
   width: 100vw;
   height: 100vh;
-  background: #E7E7E7;
+  background: whitesmoke;
   position: relative;
 }
 
@@ -93,8 +92,8 @@ body .prototipos div {
           justify-content: space-evenly;
   width: 800px;
   height: 200px;
-  border: solid 1px #000641;
-  background: #F0F0F0;
+  border: solid 1px #1E3374;
+  background: whitesmoke;
   border-radius: 5px;
   margin: 10px;
   text-align: center;
@@ -121,33 +120,34 @@ body .prototipos div h2 {
 }
 
 body .prototipos div a {
-  background: #000641;
+  background: #1E3374;
   padding: 5px 15px;
   color: white;
   font-size: 14px;
   border-radius: 5px;
-  border: solid 3px #000641;
+  border: solid 3px #1E3374;
 }
 
 body .prototipos div a:hover {
-  background: #F0F0F0;
-  color: #000641;
+  background: whitesmoke;
+  color: #1E3374;
   font-weight: 500;
-  border: solid 3px #000641;
+  border: solid 3px #1E3374;
   border-style: solid;
 }
 
 body .topBar {
-  background: #F0F0F0;
+  background: #2e4798;
   position: fixed;
   z-index: 99;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 90px;
+  height: 60px;
   -webkit-box-shadow: 0 0 12px -10px rgba(26, 26, 26, 0.25);
           box-shadow: 0 0 12px -10px rgba(26, 26, 26, 0.25);
-  padding: 20px 30px;
+  padding: 20px 10px 20px 30px;
+  border-radius: 0 0 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,13 +166,19 @@ body .topBar {
 }
 
 body .topBar .profile {
-  height: 100%;
+  height: 52px;
+  width: 52px;
   border-radius: 100%;
   cursor: pointer;
+  border: solid 8px #2e4798;
+}
+
+body .topBar .profile:hover {
+  border: solid 8px #1E3374;
 }
 
 body .topBar .actions {
-  margin-right: 50px;
+  margin-right: 7px;
   width: 70px;
   position: relative;
   display: -webkit-box;
@@ -192,20 +198,27 @@ body .topBar .actions {
 }
 
 body .topBar .actions i {
-  font-size: 18px;
+  font-size: 14px;
+  padding: 10px;
   position: relative;
+}
+
+body .topBar .actions i:hover {
+  color: whitesmoke;
+  background: #1E3374;
+  border-radius: 100%;
 }
 
 body .topBar .actions i::after {
   content: "0";
   position: absolute;
-  top: -7px;
-  right: -7px;
-  width: 16px;
-  height: 16px;
+  top: 2px;
+  right: 2px;
+  width: 14px;
+  height: 14px;
   border-radius: 20px;
-  background: #000E90;
-  color: #F0F0F0;
+  background: #00C55A;
+  color: whitesmoke;
   font-size: 11px;
   font-weight: 600;
   font-family: sans-serif;
@@ -236,7 +249,7 @@ body .topBar .actions .notifications .notificationsPanel {
   height: -moz-fit-content;
   height: fit-content;
   padding: 20px;
-  background: #F0F0F0;
+  background: whitesmoke;
   -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
           box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
   border-radius: 5px;
@@ -306,23 +319,28 @@ body .topBar .actions .notifications:hover .notificationsPanel {
 }
 
 body .topBar .name {
-  margin-right: 50px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-left: 145px;
+  text-align: center;
   font-size: 20px;
   font-weight: 600;
-  color: #000641;
+  color: whitesmoke;
 }
 
 body #sideBar {
-  background: #F0F0F0;
+  background: #1E3374;
   position: fixed;
   z-index: 99;
   top: 0;
   left: 0;
-  width: 70px;
+  width: 55px;
   height: 100vh;
   -webkit-box-shadow: 0 0 12px -10px rgba(26, 26, 26, 0.25);
           box-shadow: 0 0 12px -10px rgba(26, 26, 26, 0.25);
-  padding: 30px 0;
+  padding: 20px 0;
+  border-radius: 0 0 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,6 +360,7 @@ body #sideBar {
 
 body #sideBar .menu {
   width: 100%;
+  padding: 0 0 0 5px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -363,11 +382,12 @@ body #sideBar .menu {
 }
 
 body #sideBar .menu .item {
-  height: 70px;
-  width: 70px;
-  border-top: solid 1px #BBBBBB;
-  border-right: solid 3px rgba(0, 0, 0, 0);
-  border-left: solid 3px rgba(0, 0, 0, 0);
+  background: #1E3374;
+  border-radius: 15px 0 0 15px;
+  padding: 0 5px 0 0;
+  height: 50px;
+  width: 50px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -385,33 +405,58 @@ body #sideBar .menu .item {
           justify-content: center;
 }
 
-body #sideBar .menu .item:last-child {
-  border-bottom: solid 1px #BBBBBB;
-}
-
 body #sideBar .menu .item:hover {
   cursor: pointer;
+  background: #2e4798;
 }
 
 body #sideBar .menu .item:hover i {
-  color: #000641;
+  color: whitesmoke;
 }
 
 body #sideBar .menu .item.selected {
   cursor: pointer;
-  border-right: solid 3px #000641;
+  background: whitesmoke;
+  color: #1E3374;
+}
+
+body #sideBar .menu .item.selected::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: " ";
+  position: absolute;
+  background: whitesmoke;
+  width: 15px;
+  height: 15px;
+  z-index: 2;
+  bottom: -15px;
+  right: 0px;
+}
+
+body #sideBar .menu .item.selected::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: " ";
+  position: absolute;
+  background: #1E3374;
+  border-radius: 15px;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+  bottom: -25px;
+  right: 0px;
 }
 
 body #sideBar .menu .item.selected i {
-  color: #000641;
+  color: #1E3374;
 }
 
 body #dashboard {
   width: 100vw;
   height: 100vh;
   padding: 20px;
-  padding-top: 90px;
-  padding-left: 70px;
+  padding-top: 60px;
+  padding-left: 55px;
   overflow-y: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,6 +497,7 @@ body #dashboard .title {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: none;
 }
 
 body #dashboard .title a {
@@ -464,8 +510,8 @@ body #dashboard .title a {
   font-size: 16px;
   -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
           box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
-  color: #F0F0F0;
-  background: #000E90;
+  color: whitesmoke;
+  background: #2e4798;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -486,35 +532,36 @@ body #dashboard .title a {
 
 body #dashboard .class {
   position: relative;
-  background: #F0F0F0;
+  background: white;
   width: calc(33.33% - 20px);
   margin: 20px 0 0 20px;
   padding-top: 19.83%;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
-          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
-  min-width: 300px;
-  min-height: 200px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 35px -20px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 35px -20px rgba(26, 26, 26, 0.25);
+  min-width: 350px;
+  min-height: 220px;
 }
 
 body #dashboard .class .progress {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 15px;
+  left: 15px;
+  width: calc(100% - 30px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -524,7 +571,7 @@ body #dashboard .class .progress .percentage {
   width: 60px;
   height: 60px;
   border-radius: 60px;
-  background: #E7E7E7;
+  background: whitesmoke;
   position: relative;
   overflow: hidden;
   display: -webkit-box;
@@ -554,26 +601,11 @@ body #dashboard .class .progress .percentage .fill {
   z-index: 2;
 }
 
-body #dashboard .class .progress .percentage .fill.a {
-  height: 100%;
-  background: #00C55A;
-}
-
-body #dashboard .class .progress .percentage .fill.b {
-  height: 50%;
-  background: #FF1E00;
-}
-
-body #dashboard .class .progress .percentage .fill.c {
-  height: 0%;
-  background: none;
-}
-
 body #dashboard .class .progress .percentage .percentageValue {
   width: 50px;
   height: 50px;
   border-radius: 50px;
-  background: #F0F0F0;
+  background: white;
   font-weight: 700;
   font-size: 15px;
   z-index: 3;
@@ -599,7 +631,10 @@ body #dashboard .class .progress .percentage .percentageValue {
 body #dashboard .class .progress .message {
   font-size: 15px;
   font-weight: 700;
-  margin-left: 20px;
+  margin-top: 10px;
+  position: absolute;
+  top: -10px;
+  right: 0;
 }
 
 body #dashboard .class .progress .message b {
@@ -645,12 +680,75 @@ body #dashboard .class .information .other {
   color: #777777;
 }
 
+body #dashboard .class.aa .progress .fill {
+  height: 100%;
+  background: #00C55A;
+}
+
+body #dashboard .class.aa .message {
+  color: #00C55A;
+}
+
+body #dashboard .class.aa::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 45px;
+  width: 100%;
+  background: #cdffe1;
+  border-bottom: solid 1px #00C55A;
+  z-index: 0;
+  border-radius: 10px 10px 0 0;
+}
+
+body #dashboard .class.bb .progress .fill {
+  height: 50%;
+  background: #f5c903;
+}
+
+body #dashboard .class.bb .message {
+  color: #f5c903;
+}
+
+body #dashboard .class.bb::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 45px;
+  width: 100%;
+  background: #fff5be;
+  border-bottom: solid 1px #f5c903;
+  z-index: 0;
+  border-radius: 10px 10px 0 0;
+}
+
+body #dashboard .class.cc .progress .fill {
+  height: 0%;
+  background: #c81900;
+}
+
+body #dashboard .class.cc .message {
+  color: #c81900;
+}
+
+body #dashboard .class.cc::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 45px;
+  width: 100%;
+  background: #ffd7d7;
+  border-bottom: solid 1px #c81900;
+  z-index: 0;
+  border-radius: 10px 10px 0 0;
+}
+
 body #dashboard .decision {
   position: relative;
-  background: #F0F0F0;
+  background: #e9ecf8;
   width: calc(33.33% - 20px);
   margin: 20px 0 0 20px;
-  height: calc(100% - 70px);
+  height: calc(100% - 20px);
   border-radius: 5px;
   -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
           box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
@@ -737,6 +835,7 @@ body #dashboard .decision .softwares .software {
 
 body #dashboard .decision .softwares .software i {
   font-size: 15px;
+  color: #1E3374;
 }
 
 body #dashboard .decision .softwares .software .leftArrow {
@@ -821,9 +920,13 @@ body #dashboard .decision .buttonHolder a {
 body #dashboard .decision .buttonHolder.done a {
   -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
           box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
-  color: #F0F0F0;
-  background: #000E90;
+  color: whitesmoke;
+  background: #2e4798;
   cursor: pointer;
+}
+
+body #dashboard .decision.notNeeded {
+  background: whitesmoke;
 }
 
 body #dashboard .decision.notNeeded .softwares .software .softName {
@@ -838,6 +941,10 @@ body #dashboard .decision.notNeeded .softwares .software .leftArrow {
 
 body #dashboard .decision.notNeeded .softwares .software .comment {
   display: none;
+}
+
+body #dashboard .decision.needed {
+  background: whitesmoke;
 }
 
 body #dashboard .decision.needed .softwares .software .softName {
@@ -865,7 +972,7 @@ body #dashboard .decision.needed .softwares .software .comment.empty i {
 
 body #dashboard .decision.needed .softwares .software .comment.filled i {
   font-size: 17px;
-  color: #000641;
+  color: #1E3374;
 }
 
 body #dashboard .decision.needed .buttonHolder {
@@ -879,14 +986,14 @@ body #dashboard .decision.needed .buttonHolder a {
   width: 140px;
   -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
           box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
-  color: #F0F0F0;
-  background: #000E90;
+  color: whitesmoke;
+  background: #2e4798;
   cursor: pointer;
 }
 
 body #dashboard .decision-4 {
   position: relative;
-  background: #F0F0F0;
+  background: whitesmoke;
   width: calc(25% - 20px);
   margin: 20px 0 0 20px;
   height: calc(100% - 70px);
@@ -976,6 +1083,7 @@ body #dashboard .decision-4 .softwares .software {
 }
 
 body #dashboard .decision-4 .softwares .software i {
+  color: #1E3374;
   font-size: 15px;
 }
 
@@ -1004,7 +1112,7 @@ body #dashboard .decision-4 .softwares .software .amount {
   width: 35px;
   height: 20px;
   border-radius: 10px;
-  background: #000E90;
+  background: #2e4798;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1026,7 +1134,7 @@ body #dashboard .decision-4 .softwares .software .amount {
 
 body #dashboard .decision-4 .softwares .software .amount span,
 body #dashboard .decision-4 .softwares .software .amount i {
-  color: #F0F0F0;
+  color: whitesmoke;
   font-size: 12px;
 }
 
@@ -1101,8 +1209,8 @@ body #dashboard .decision-4 .buttonHolder a {
 body #dashboard .decision-4 .buttonHolder.done a {
   -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
           box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
-  color: #F0F0F0;
-  background: #000E90;
+  color: whitesmoke;
+  background: #2e4798;
   cursor: pointer;
 }
 
@@ -1145,7 +1253,7 @@ body #dashboard .decision-4.needed .softwares .software .comment.empty i {
 
 body #dashboard .decision-4.needed .softwares .software .comment.filled i {
   font-size: 17px;
-  color: #000641;
+  color: #1E3374;
 }
 
 body #dashboard .decision-4.needed .buttonHolder {
@@ -1159,8 +1267,8 @@ body #dashboard .decision-4.needed .buttonHolder a {
   width: 140px;
   -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
           box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
-  color: #F0F0F0;
-  background: #000E90;
+  color: whitesmoke;
+  background: #2e4798;
   cursor: pointer;
 }
 
@@ -1317,7 +1425,7 @@ body #dashboard .decision-4.techStay .softwares .software .group li .comment .re
   top: -30px;
   padding: 6px 12px;
   z-index: 99;
-  background: #F0F0F0;
+  background: whitesmoke;
   -webkit-box-shadow: 0 0 12px -10px #1A1A1A;
           box-shadow: 0 0 12px -10px #1A1A1A;
   width: 160px;
@@ -1355,7 +1463,7 @@ body #dashboard .decision-4.techStay .softwares .software .group li .comment .re
 }
 
 body #dashboard .decision-4.techStay .softwares .software .group li .comment:hover {
-  color: #000641;
+  color: #1E3374;
 }
 
 body #dashboard .decision-4.techStay .softwares .software .group li .comment:hover .reason {
@@ -1517,8 +1625,8 @@ body #dashboard .decision-4.techAdd .softwares .software .group li .comment:hove
 body #dashboard #popUpComment {
   position: fixed;
   z-index: 99;
-  top: 90px;
-  left: 70px;
+  top: 60px;
+  left: 55px;
   background: rgba(0, 0, 0, 0.3);
   width: calc(100% - 70px);
   height: calc(100% - 90px);
@@ -1545,7 +1653,7 @@ body #dashboard #popUpComment .modal {
   position: relative;
   width: 450px;
   height: 400px;
-  background: #F0F0F0;
+  background: whitesmoke;
   border-radius: 5px;
   padding: 25px 20px;
   -webkit-box-shadow: 0 0 12px -10px #1A1A1A;
@@ -1650,8 +1758,8 @@ body #dashboard #popUpComment .modal form a {
           box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
   font-weight: 400;
   font-size: 16px;
-  color: #F0F0F0;
-  background: #000E90;
+  color: whitesmoke;
+  background: #2e4798;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1673,8 +1781,8 @@ body #dashboard #popUpComment .modal form a {
 body #dashboard #popUpAdd {
   position: fixed;
   z-index: 99;
-  top: 90px;
-  left: 70px;
+  top: 60px;
+  left: 55px;
   background: rgba(0, 0, 0, 0.3);
   width: calc(100% - 70px);
   height: calc(100% - 90px);
@@ -1701,7 +1809,7 @@ body #dashboard #popUpAdd .modal {
   position: relative;
   width: 450px;
   height: 320px;
-  background: #F0F0F0;
+  background: whitesmoke;
   border-radius: 5px;
   padding: 25px 20px;
   -webkit-box-shadow: 0 0 12px -10px #1A1A1A;
@@ -1915,8 +2023,8 @@ body #dashboard #popUpAdd .modal form a {
           box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
   font-weight: 400;
   font-size: 16px;
-  color: #F0F0F0;
-  background: #000E90;
+  color: whitesmoke;
+  background: #2e4798;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1938,8 +2046,8 @@ body #dashboard #popUpAdd .modal form a {
 body #dashboard #popUpSend {
   position: fixed;
   z-index: 99;
-  top: 90px;
-  left: 70px;
+  top: 60px;
+  left: 55px;
   background: rgba(0, 0, 0, 0.3);
   width: calc(100% - 70px);
   height: calc(100% - 90px);
@@ -1966,7 +2074,7 @@ body #dashboard #popUpSend .modal {
   position: relative;
   width: 600px;
   height: 400px;
-  background: #F0F0F0;
+  background: whitesmoke;
   border-radius: 5px;
   padding: 25px 20px;
   -webkit-box-shadow: 0 0 12px -10px #1A1A1A;
@@ -2027,8 +2135,8 @@ body #dashboard #popUpSend .modal .button {
           box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
   font-weight: 400;
   font-size: 16px;
-  color: #F0F0F0;
-  background: #000E90;
+  color: whitesmoke;
+  background: #2e4798;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2050,8 +2158,8 @@ body #dashboard #popUpSend .modal .button {
 body #dashboard #popUpConfirm {
   position: fixed;
   z-index: 99;
-  top: 90px;
-  left: 70px;
+  top: 60px;
+  left: 55px;
   background: rgba(0, 0, 0, 0.3);
   width: calc(100% - 70px);
   height: calc(100% - 90px);
@@ -2078,7 +2186,7 @@ body #dashboard #popUpConfirm .modal {
   position: relative;
   width: 600px;
   height: 400px;
-  background: #F0F0F0;
+  background: whitesmoke;
   border-radius: 5px;
   padding: 25px 20px;
   -webkit-box-shadow: 0 0 12px -10px #1A1A1A;
@@ -2239,8 +2347,8 @@ body #dashboard #popUpConfirm .modal .button {
           box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
   font-weight: 400;
   font-size: 16px;
-  color: #F0F0F0;
-  background: #000E90;
+  color: whitesmoke;
+  background: #2e4798;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2262,8 +2370,8 @@ body #dashboard #popUpConfirm .modal .button {
 body #dashboard #popUpSendTech {
   position: fixed;
   z-index: 99;
-  top: 90px;
-  left: 70px;
+  top: 60px;
+  left: 55px;
   background: rgba(0, 0, 0, 0.3);
   width: calc(100% - 70px);
   height: calc(100% - 90px);
@@ -2290,7 +2398,7 @@ body #dashboard #popUpSendTech .modal {
   position: relative;
   width: 800px;
   height: 400px;
-  background: #F0F0F0;
+  background: whitesmoke;
   border-radius: 5px;
   padding: 25px 20px;
   -webkit-box-shadow: 0 0 12px -10px #1A1A1A;
@@ -2451,8 +2559,8 @@ body #dashboard #popUpSendTech .modal .button {
           box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
   font-weight: 400;
   font-size: 16px;
-  color: #F0F0F0;
-  background: #000E90;
+  color: whitesmoke;
+  background: #2e4798;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2474,8 +2582,8 @@ body #dashboard #popUpSendTech .modal .button {
 body #dashboard #popUpSendTechDone {
   position: fixed;
   z-index: 99;
-  top: 90px;
-  left: 70px;
+  top: 60px;
+  left: 55px;
   background: rgba(0, 0, 0, 0.3);
   width: calc(100% - 70px);
   height: calc(100% - 90px);
@@ -2502,7 +2610,7 @@ body #dashboard #popUpSendTechDone .modal {
   position: relative;
   width: 800px;
   height: 400px;
-  background: #F0F0F0;
+  background: whitesmoke;
   border-radius: 5px;
   padding: 25px 20px;
   -webkit-box-shadow: 0 0 12px -10px #1A1A1A;
@@ -2563,8 +2671,8 @@ body #dashboard #popUpSendTechDone .modal .button {
           box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
   font-weight: 400;
   font-size: 16px;
-  color: #F0F0F0;
-  background: #000E90;
+  color: whitesmoke;
+  background: #2e4798;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
