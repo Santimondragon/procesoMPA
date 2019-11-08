@@ -7,6 +7,7 @@ amount.forEach(e => {
         group.forEach(ele => {
             if (ele.style.display === "flex") {
                 ele.style.display = "none"
+                console.log(ele.childNodes);
                 icon.forEach(elem => {
                     elem.style.transform = "rotate(180deg)";
                     elem.style.marginTop = "2px";
@@ -22,3 +23,16 @@ amount.forEach(e => {
         })
     })
 });
+
+let burguer = document.getElementById("burguer");
+let sideBar = document.getElementById("sideBar");
+
+burguer.addEventListener("click", () => {
+    if (sideBar.className === "open"){
+        sideBar.className = "closed";
+    } else {
+        sideBar.className = "open";
+    }
+});
+
+

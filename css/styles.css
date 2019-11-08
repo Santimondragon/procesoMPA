@@ -47,6 +47,261 @@ body {
   height: 100vh;
   background: whitesmoke;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body#login #description {
+  background: #1E3374;
+  height: 100vh;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 400px;
+          flex: 0 1 400px;
+  max-width: 40%;
+  min-width: 200px;
+  padding: 55px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body#login #description i {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+body#login #description div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body#login #description div p {
+  text-align: center;
+  line-height: 1.3em;
+  font-size: 14px;
+  color: whitesmoke;
+  font-weight: 200;
+}
+
+body#login #description div .indicators {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body#login #description div .indicators .indicator {
+  width: 11px;
+  height: 11px;
+  border: solid 2px whitesmoke;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+
+body#login #description div .indicators .indicator:last-child {
+  margin: 0;
+}
+
+body#login #description div .indicators .indicator.active {
+  background: whitesmoke;
+}
+
+body#login #description div .indicators .indicator:hover {
+  background: whitesmoke;
+  cursor: pointer;
+}
+
+body#login #description .arrow {
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+}
+
+body#login #description .arrow.left {
+  left: 20px;
+}
+
+body#login #description .arrow.right {
+  right: 20px;
+}
+
+body#login #form {
+  background: #e9ecf8;
+  height: 100vh;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body#login #form .logo {
+  margin-bottom: 40px;
+}
+
+body#login #form form,
+body#login #form .formItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body#login #form form {
+  background: white;
+  padding: 35px 20px;
+  width: 360px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 3px 12px -3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 12px -3px rgba(0, 0, 0, 0.2);
+}
+
+body#login #form form p {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+body#login #form form .formItem {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body#login #form form .formItem label {
+  font-size: 12px;
+  color: #1E3374;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+body#login #form form .formItem input,
+body#login #form form .formItem select {
+  width: 100%;
+  border-bottom: solid 1px #2e4798;
+  height: 30px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+body#login #form form .formItem option {
+  color: #1E3374;
+}
+
+body#login #form form a {
+  font-size: 13px;
+  text-decoration: underline;
+  color: #1E3374;
+  margin-bottom: 20px;
+}
+
+body#login #form form button {
+  width: 100px;
+  height: 40px;
+  background: #2e4798;
+  color: whitesmoke;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 3px 12px -3px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 3px 12px -3px rgba(0, 0, 0, 0.35);
+}
+
+body#login #form form button:hover {
+  background: #1E3374;
+  -webkit-box-shadow: 0px 8px 16px -3px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 8px 16px -3px rgba(0, 0, 0, 0.35);
 }
 
 body #titulo {
@@ -332,15 +587,16 @@ body .topBar .name {
 body #sideBar {
   background: #1E3374;
   position: fixed;
-  z-index: 99;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 55px;
   height: 100vh;
   -webkit-box-shadow: 0 0 12px -10px rgba(26, 26, 26, 0.25);
           box-shadow: 0 0 12px -10px rgba(26, 26, 26, 0.25);
-  padding: 20px 0;
+  padding: 5px 0 5px 15px;
   border-radius: 0 0 15px 0;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -348,14 +604,61 @@ body #sideBar {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #sideBar .action {
+  border-radius: 15px 0 0 15px;
+  padding: 0 0 0 15px;
+  margin-left: -10px;
+  width: calc(100% + 10px);
+  height: 50px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #sideBar .action span {
+  display: none;
+}
+
+body #sideBar .action:hover {
+  cursor: pointer;
+  background: #2e4798;
+}
+
+body #sideBar .action:hover i {
+  color: whitesmoke;
+}
+
+body #sideBar .action.selected {
+  cursor: pointer;
+  background: whitesmoke;
+  color: #1E3374;
+}
+
+body #sideBar .action.selected i {
+  color: #1E3374;
 }
 
 body #sideBar .menu {
@@ -373,9 +676,9 @@ body #sideBar .menu {
           flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -384,25 +687,30 @@ body #sideBar .menu {
 body #sideBar .menu .item {
   background: #1E3374;
   border-radius: 15px 0 0 15px;
-  padding: 0 5px 0 0;
+  padding: 0 0 0 15px;
+  margin-left: -15px;
   height: 50px;
-  width: 50px;
+  width: calc(100% + 15px);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #sideBar .menu .item span {
+  display: none;
 }
 
 body #sideBar .menu .item:hover {
@@ -412,6 +720,7 @@ body #sideBar .menu .item:hover {
 
 body #sideBar .menu .item:hover i {
   color: whitesmoke;
+  background: #2e4798;
 }
 
 body #sideBar .menu .item.selected {
@@ -420,34 +729,47 @@ body #sideBar .menu .item.selected {
   color: #1E3374;
 }
 
-body #sideBar .menu .item.selected::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  content: " ";
-  position: absolute;
-  background: whitesmoke;
-  width: 15px;
-  height: 15px;
-  z-index: 2;
-  bottom: -15px;
-  right: 0px;
-}
-
-body #sideBar .menu .item.selected::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  content: " ";
-  position: absolute;
-  background: #1E3374;
-  border-radius: 15px;
-  width: 25px;
-  height: 25px;
-  z-index: 2;
-  bottom: -25px;
-  right: 0px;
-}
-
 body #sideBar .menu .item.selected i {
+  color: #1E3374;
+}
+
+body #sideBar .menu .item.selected i:hover {
+  background: whitesmoke;
+  color: #1E3374;
+}
+
+body #sideBar .menu .item.selected:hover {
+  cursor: pointer;
+  background: whitesmoke;
+  color: #1E3374;
+}
+
+body #sideBar .menu .item.selected:hover i {
+  background: whitesmoke;
+  color: #1E3374;
+}
+
+body #sideBar.open {
+  width: 180px;
+}
+
+body #sideBar.open .action span {
+  margin-left: 15px;
+  font-size: 13px;
+  font-weight: 500;
+  color: whitesmoke;
+  display: inline;
+}
+
+body #sideBar.open .menu .item span {
+  margin-left: 15px;
+  font-size: 13px;
+  font-weight: 500;
+  color: whitesmoke;
+  display: inline;
+}
+
+body #sideBar.open .menu .item.selected span {
   color: #1E3374;
 }
 
@@ -743,6 +1065,11 @@ body #dashboard .class.cc::before {
   border-radius: 10px 10px 0 0;
 }
 
+body #dashboard .class:hover {
+  -webkit-box-shadow: 0 5px 20px -5px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 5px 20px -5px rgba(26, 26, 26, 0.25);
+}
+
 body #dashboard .decision {
   position: relative;
   background: #e9ecf8;
@@ -891,8 +1218,9 @@ body #dashboard .decision .buttonHolder {
 body #dashboard .decision .buttonHolder a {
   -ms-flex-item-align: center;
       align-self: center;
+  padding: 0 20px;
   height: 40px;
-  width: 120px;
+  min-width: 120px;
   border-radius: 5px;
   margin-top: 10px;
   font-weight: 400;
@@ -923,6 +1251,14 @@ body #dashboard .decision .buttonHolder.done a {
   color: whitesmoke;
   background: #2e4798;
   cursor: pointer;
+  -webkit-box-shadow: 0px 3px 12px -3px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 3px 12px -3px rgba(0, 0, 0, 0.35);
+}
+
+body #dashboard .decision .buttonHolder.done a:hover {
+  background: #1E3374;
+  -webkit-box-shadow: 0px 8px 16px -3px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 8px 16px -3px rgba(0, 0, 0, 0.35);
 }
 
 body #dashboard .decision.notNeeded {
@@ -983,12 +1319,19 @@ body #dashboard .decision.needed .buttonHolder {
 }
 
 body #dashboard .decision.needed .buttonHolder a {
-  width: 140px;
   -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
           box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
   color: whitesmoke;
   background: #2e4798;
   cursor: pointer;
+  -webkit-box-shadow: 0px 3px 12px -3px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 3px 12px -3px rgba(0, 0, 0, 0.35);
+}
+
+body #dashboard .decision.needed .buttonHolder a:hover {
+  background: #1E3374;
+  -webkit-box-shadow: 0px 8px 16px -3px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 8px 16px -3px rgba(0, 0, 0, 0.35);
 }
 
 body #dashboard .decision-4 {
@@ -1622,14 +1965,92 @@ body #dashboard .decision-4.techAdd .softwares .software .group li .comment:hove
   color: #BBBBBB;
 }
 
+body #dashboard .decision-4.sop .softwares .software .leftArrow,
+body #dashboard .decision-4.sop .softwares .software .rightArrow {
+  display: none;
+}
+
+body #dashboard .decision-4.sop .softwares .software .softName {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 52%;
+          flex: 0 1 52%;
+}
+
+body #dashboard .decision-4.sop .softwares .software .group {
+  width: 100%;
+  padding: 5px 12px;
+  position: absolute;
+  top: 100%;
+  border-bottom: solid 1px #E7E7E7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #dashboard .decision-4.sop .softwares .software .group li {
+  width: 100%;
+  padding: 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #dashboard .decision-4.sop .softwares .software .group li .department {
+  font-size: 13px;
+  font-weight: 500;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+}
+
+body #dashboard .decision-4.sop .softwares .software .group li .version {
+  display: block;
+  font-size: 13px;
+}
+
+body #dashboard .decision-4.sop .softwares .software .group li .comment {
+  display: block;
+  font-size: 14px;
+  color: #BBBBBB;
+  cursor: default;
+}
+
+body #dashboard .decision-4.sop .softwares .software .group li .comment:hover {
+  color: #BBBBBB;
+}
+
 body #dashboard #popUpComment {
   position: fixed;
   z-index: 99;
   top: 60px;
   left: 55px;
   background: rgba(0, 0, 0, 0.3);
-  width: calc(100% - 70px);
-  height: calc(100% - 90px);
+  width: calc(100% - 55px);
+  height: calc(100% - 60px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1784,8 +2205,8 @@ body #dashboard #popUpAdd {
   top: 60px;
   left: 55px;
   background: rgba(0, 0, 0, 0.3);
-  width: calc(100% - 70px);
-  height: calc(100% - 90px);
+  width: calc(100% - 55px);
+  height: calc(100% - 60px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2049,8 +2470,8 @@ body #dashboard #popUpSend {
   top: 60px;
   left: 55px;
   background: rgba(0, 0, 0, 0.3);
-  width: calc(100% - 70px);
-  height: calc(100% - 90px);
+  width: calc(100% - 55px);
+  height: calc(100% - 60px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2161,8 +2582,8 @@ body #dashboard #popUpConfirm {
   top: 60px;
   left: 55px;
   background: rgba(0, 0, 0, 0.3);
-  width: calc(100% - 70px);
-  height: calc(100% - 90px);
+  width: calc(100% - 55px);
+  height: calc(100% - 60px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2373,8 +2794,8 @@ body #dashboard #popUpSendTech {
   top: 60px;
   left: 55px;
   background: rgba(0, 0, 0, 0.3);
-  width: calc(100% - 70px);
-  height: calc(100% - 90px);
+  width: calc(100% - 55px);
+  height: calc(100% - 60px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2585,8 +3006,8 @@ body #dashboard #popUpSendTechDone {
   top: 60px;
   left: 55px;
   background: rgba(0, 0, 0, 0.3);
-  width: calc(100% - 70px);
-  height: calc(100% - 90px);
+  width: calc(100% - 55px);
+  height: calc(100% - 60px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2689,5 +3110,231 @@ body #dashboard #popUpSendTechDone .modal .button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+body #dashboard #popUpSoftwareAproved {
+  position: fixed;
+  z-index: 99;
+  top: 60px;
+  left: 55px;
+  background: rgba(0, 0, 0, 0.3);
+  width: calc(100% - 55px);
+  height: calc(100% - 60px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard #popUpSoftwareAproved .modal {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background: whitesmoke;
+  border-radius: 5px;
+  padding: 25px 20px;
+  -webkit-box-shadow: 0 0 12px -10px #1A1A1A;
+          box-shadow: 0 0 12px -10px #1A1A1A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpSoftwareAproved .modal .title {
+  margin: 0;
+  height: 40px;
+  font-size: 18px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #BBBBBB;
+}
+
+body #dashboard #popUpSoftwareAproved .modal .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+body #dashboard #popUpSoftwareAproved .modal .close i {
+  font-size: 16px;
+}
+
+body #dashboard #popUpSoftwareAproved .modal .prev {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpSoftwareAproved .modal .prev article {
+  padding: 10px;
+  height: 100%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpSoftwareAproved .modal .prev article p {
+  font-weight: 500;
+}
+
+body #dashboard #popUpSoftwareAproved .modal .prev article .softwares {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpSoftwareAproved .modal .prev article .softwares .software {
+  padding: 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #dashboard #popUpSoftwareAproved .modal .prev article .softwares .software img {
+  height: 16px;
+  margin-right: 8px;
+}
+
+body #dashboard #popUpSoftwareAproved .modal .prev article .softwares .software p {
+  height: 20px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+body #dashboard #popUpSoftwareAproved .modal .prev p {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+body #dashboard #popUpSoftwareAproved .modal .prev div {
+  height: 1px;
+  width: 100%;
+  background: #BBBBBB;
+}
+
+body #dashboard #popUpSoftwareAproved .modal .button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  margin-top: 10px;
+  -webkit-box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 0 0 12px -6px rgba(26, 26, 26, 0.25);
+  font-weight: 400;
+  font-size: 16px;
+  color: whitesmoke;
+  background: #2e4798;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #dashboard .modal .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #dashboard .modal .close i {
+  color: #2e4798;
+}
+
+body #dashboard .modal .close i:hover {
+  color: #1E3374;
 }
 /*# sourceMappingURL=styles.css.map */

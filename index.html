@@ -1,41 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="https://kit.fontawesome.com/92d08a6115.js"></script>
+
+    <!-- FONTAWESOME CSS FILE -->
+    <link href="css/fontawesome/css/all.css" rel="stylesheet">
+
+    <!-- STYLE CSS FILE -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- TITLE -->
+    <title>Login - MPA</title>
 </head>
 
-<body>
+<body id="login">
+    <section id="description">
+        <i class="far fa-lightbulb"></i>
+        <div>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, blanditiis dicta nostrum, optio nisi voluptatum dolorem iusto repudiandae sed quae saepe officia a. Dolores, est expedita necessitatibus consectetur qui omnis?
+            </p>
 
-    <h1 id="titulo"> Prototipo de proceso MPA</h1>
-    <section class="prototipos">
-        <div class="jefeDpto">
-            <h2>Prototipo de Jefe de Departamento</h2>
-            <a href="proceso.html"> Ver </a>
-        </div>
-        <div class="coordinadorTec">
-            <h2>Prototipo de Coordinador de Tecnología</h2>
-            <a href="tecnologia/home.html"> Ver </a>
-        </div>
-        <div class="profesor">
-            <h2> Prototipo del Profesor</h2>
-            <a href="profesor/home.html"> Ver </a>
-        </div>
-        <div class="coordinadorCompras">
-            <h2>Prototipo de Coordinador de Compras </h2>
-            <a href="proceso.html"> Ver </a>
-        </div>
-        <div class="admSoporte">
-            <h2>Prototipo de Administrador de Soporte</h2>
-            <a href="proceso.html"> Ver </a>
+            <ui class="indicators">
+                <li class="indicator active"></li>
+                <li class="indicator"></li>
+                <li class="indicator"></li>
+                <li class="indicator"></li>
+                <li class="indicator"></li>
+            </ui>
+            <i class="fas fa-chevron-left arrow left"></i>
+            <i class="fas fa-chevron-right arrow right"></i>
         </div>
     </section>
+    <section id="form">
+        <div class="logo">
+            <img src="" alt="logo">
+        </div>
+        <form onsubmit="return false;">
+            <p>Bienvenido al sistema de MPA</p>
+            <input type="hidden" id="verification" value="123456">
+            <div class="formItem">
+                <label for="">Identificación</label>
+                <input type="text" id="idInput" placeholder="Identificación" required>
+            </div>
 
+            <div class="formItem">
+                <label for="">Contraseña</label>
+                <input type="password" id="passInput" placeholder="•••••••••" required>
+            </div>
+
+            <div class="formItem">
+                <label for="">Identificación</label>
+                <select name="tipo" id="typeSelect" required>
+                    <option value="" selected disabled>Selecciona tu rol...</option>
+                    <option value="profe">Profesor</option>
+                    <option value="dpto">Jefe de Departamento</option>
+                    <option value="tech">Coordinador de Tecnología</option>
+                    <option value="compras">Coordinador de Compras</option>
+                    <option value="soporte">Administrador de Soporte</option>
+                </select>
+            </div>
+
+            <a href="#">Olvide mi contraseña</a>
+
+            <button id="loginBtn">Entrar</button>
+        </form>
+    </section>
 </body>
 
+<script src="/js/login.js"></script>
 </html>
