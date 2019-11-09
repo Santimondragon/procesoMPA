@@ -18,7 +18,7 @@
 
 <body>
     <section class="topBar">
-        <h1 class="name">Coordinador de Tecnología</h1>
+        <h1 class="name">Jefe de departamento</h1>
         <div class="actions">
             <i class="fas fa-cog settings"></i>
             <i class="fas fa-bell notifications">
@@ -59,29 +59,33 @@
                 </ul>
             </i>
         </div>
-        <img src="../images/ppTecnologia.png" alt="pp" class="profile">
+        <img src="../images/ppJefe.png" alt="pp" class="profile">
     </section>
 
     <section id="sideBar" class="closed">
             <div class="action" id="burguer">
                 <i class="fas fa-bars"></i>
                 <span>Cerrar</span>
-            </div> 
+            </div>
             <ul class="menu">
-                <a href="home.html" class="item selected">
-                    <i class="fas fa-university"></i>
-                    <span>Departamentos</span>
+                <a href="sinProfesor.html" class="item">
+                    <i class="fas fa-user-lock"></i>
+                    <span>Clases Sin Profesor</span>
                 </a>
-                <a href="#" class="item">
+                <a href="home.html" class="item">
                     <i class="fas fa-book"></i>
                     <span>Clases</span>
+                </a>
+                <a href="allStay.html" class="item selected">
+                    <i class="fas fa-tasks"></i>
+                    <span>Softwares</span>
                 </a>
             </ul>
             <a href="../" class="action">
                 <i class="fas fa-door-open"></i>
                 <span>Cerrar Sesión</span>
             </a>
-        </section>
+    </section>
 
     <section id="dashboard">
         <article class="decision-4 techDelete">
@@ -106,43 +110,19 @@
             <h1 class="name">Agregar</h1>
             <div class="separator"></div>
             <ul class="softwares">
-                <li class="software">
-                    <a href="allUpgrade.html"><i class="fas fa-chevron-left leftArrow"></i></a>
-                    <img src="../images/androidStudioIcon.png" alt="icon">
-                    <p class="softName">Android Studio</p>
-                    <p class="version">v. 9</p>
-                    <span class="amount">
-                        <span>3</span>
-                        <i class="fas fa-sort-down"></i>
-                    </span>
-                    <a href="allStay.html"><i class="fas fa-chevron-right rightArrow"></i></a>
-                    <i class="fas fa-comment comment"></i>
-                    <ul class="group">
-                        <li>
-                            <span class="department">D. de Diseño</span>
-                            <span class="version">v 3.3.5</span>
-                            <i class="fas fa-comment comment"></i>
-                        </li>
-                        <li>
-                            <span class="department">D. de TICS</span>
-                            <span class="version">v 3.3.5</span>
-                            <i class="fas fa-comment comment"></i>
-                        </li>
-                        <li>
-                            <span class="department">D. de C. Naturales</span>
-                            <span class="version">v 3.3.5</span>
-                            <i class="fas fa-comment comment"></i>
-                        </li>
-                    </ul>
-                </li>
             </ul>
         </article>
-        <div id="btnEnviar">
-                <a href="allAddPopUp.html">Enviar</a>
-            </div>
+        <section id="popUpSendTechDone">
+            <article class="modal">
+                <h1 class="title">Confirmación MPA</h1>
+                <a class="close" href="homeFull.html"><i class="fas fa-times"></i></a>
+                <img src="../images/correctIcon.png" alt="">
+                <h1>Actualización enviada correctamente</h1>
+                <a class="button" href="homeFull.html">Cerrar</a>
+            </article>
+        </section>
     </section>
 
-    <script src="../js/main.js"></script>
 </body>
 
 </html>

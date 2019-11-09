@@ -89,27 +89,71 @@ body {
 
             i {
                 font-size: 48px;
-                margin-bottom: 40px;
+                margin-bottom: 20px;
             }
 
             div {
+                height: 240px;
+                overflow: hidden;
+                padding: 20px 0;
                 //flex
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                align-items: flex-start;
                 align-content: center;
-                justify-content: center;
+                justify-content: space-around;
 
-                p {
-                    text-align: center;
-                    line-height: 1.3em;
-                    font-size: 14px;
-                    color: $white;
-                    font-weight: 200;
+                .titles {
+                    width: 100%;
+                    //flex
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    align-content: center;
+                    justify-content: flex-start;
+
+                    .title {
+                        width: 100%;
+                        text-align: center;
+                        line-height: 1.3em;
+                        font-size: 22px;
+                        color: $white;
+                        font-weight: 500;
+                        display: none;
+
+                        &.active {
+                            display: block;
+                        }
+                    }
+                }
+
+                .messages {
+                    width: 100%;
+                    flex: 1 1 auto;
+                    //flex
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    align-content: center;
+                    justify-content: flex-start;
+
+                    .message {
+                        width: 100%;
+                        text-align: center;
+                        line-height: 1.3em;
+                        font-size: 13px;
+                        color: $white;
+                        font-weight: 200;
+                        display: none;
+
+                        &.active {
+                            display: block;
+                        }
+                    }
                 }
 
                 .indicators {
-                    margin-top: 40px;
+                    align-self: center;
                     //flex
                     display: flex;
                     flex-direction: row;
@@ -143,7 +187,7 @@ body {
             .arrow {
                 font-size: 16px;
                 position: absolute;
-                top: 50%;
+                top: 55%;
 
                 &.left {
                     left: 20px;
@@ -402,6 +446,8 @@ body {
             }
 
             .notifications {
+                
+                z-index: 999999;
                 .notificationsPanel {
                     position: absolute;
                     top: 15px;
@@ -458,6 +504,7 @@ body {
                 &:hover {
                     .notificationsPanel {
                         display: flex;
+                        z-index: 999999;
                     }
                 }
             }
@@ -878,7 +925,7 @@ body {
                 }
             }
 
-            &:hover {     
+            &:hover {
                 box-shadow: 0 5px 20px -5px $shadow;
             }
         }
@@ -1459,6 +1506,7 @@ body {
                                         justify-content: flex-start;
 
                                         .title {
+                                            display: flex;
                                             width: 100%;
                                             border-bottom: solid 1px $borderGray;
                                             margin: 0px;
@@ -1672,6 +1720,328 @@ body {
                             }
                         }
                     }
+                }
+            }
+
+            &.depDelete {
+                .softwares {
+                    .software {
+                        .leftArrow {
+                            display: none;
+                        }
+
+                        .softName {
+                            flex: 0 1 58%;
+                        }
+
+                        .version {
+                            display: block;
+                            font-size: 13px;
+                            margin-right: 8px;
+                        }
+
+                        .comment {
+                            display: none;
+                            font-size: 14px;
+                            color: $gray;
+                            cursor: pointer;
+                            position: relative;
+
+                            .reason {
+                                position: absolute;
+                                left: 120%;
+                                top: -30px;
+                                padding: 6px 12px;
+                                z-index: 99;
+                                background: $white;
+                                box-shadow: 0 0 12px -10px $fontBlack;
+                                width: 160px;
+                                height: 110px;
+
+                                // FLEX
+                                display: none;
+                                flex-direction: column;
+                                align-content: center;
+                                align-items: center;
+                                justify-content: flex-start;
+
+                                .title {
+                                    display: flex;
+                                    width: 100%;
+                                    border-bottom: solid 1px $borderGray;
+                                    margin: 0px;
+                                    padding: 12px;
+                                    font-weight: 500;
+                                }
+
+                                .content {
+                                    flex: 1 1 auto;
+                                    padding: 12px;
+                                    font-weight: 400;
+                                    text-align: center;
+                                }
+                            }
+
+                            &:hover {
+                                color: $darkBlue;
+
+                                .reason {
+                                    display: flex;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            &.depStay {
+                .softwares {
+                    .software {
+
+                        .softName {
+                            flex: 0 1 45%;
+                        }
+
+                        .version {
+                            display: block;
+                            font-size: 13px;
+                            margin-right: 8px;
+                        }
+
+                        .comment {
+                            display: block;
+                            font-size: 14px;
+                            color: $gray;
+                            cursor: pointer;
+                            position: relative;
+
+                            .reason {
+                                position: absolute;
+                                left: 120%;
+                                top: -30px;
+                                padding: 6px 12px;
+                                z-index: 99;
+                                background: $white;
+                                box-shadow: 0 0 12px -10px $fontBlack;
+                                width: 160px;
+                                height: 110px;
+
+                                // FLEX
+                                display: none;
+                                flex-direction: column;
+                                align-content: center;
+                                align-items: center;
+                                justify-content: flex-start;
+
+                                .title {
+                                    display: flex;
+                                    width: 100%;
+                                    border-bottom: solid 1px $borderGray;
+                                    margin: 0px;
+                                    padding: 12px;
+                                    font-weight: 500;
+                                }
+
+                                .content {
+                                    flex: 1 1 auto;
+                                    padding: 12px;
+                                    font-weight: 400;
+                                    text-align: center;
+                                }
+                            }
+
+                            &:hover {
+                                color: $darkBlue;
+
+                                .reason {
+                                    display: flex;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            &.depUpgrade {
+                .softwares {
+                    .software {
+
+                        .softName {
+                            flex: 0 1 45%;
+                        }
+
+                        .version {
+                            display: block;
+                            font-size: 13px;
+                            margin-right: 8px;
+                        }
+
+                        .comment {
+                            display: none;
+                            font-size: 14px;
+                            color: $gray;
+                            cursor: pointer;
+                            position: relative;
+
+                            .reason {
+                                position: absolute;
+                                left: 120%;
+                                top: -30px;
+                                padding: 6px 12px;
+                                z-index: 99;
+                                background: $white;
+                                box-shadow: 0 0 12px -10px $fontBlack;
+                                width: 160px;
+                                height: 110px;
+
+                                // FLEX
+                                display: none;
+                                flex-direction: column;
+                                align-content: center;
+                                align-items: center;
+                                justify-content: flex-start;
+
+                                .title {
+                                    display: flex;
+                                    width: 100%;
+                                    border-bottom: solid 1px $borderGray;
+                                    margin: 0px;
+                                    padding: 12px;
+                                    font-weight: 500;
+                                }
+
+                                .content {
+                                    flex: 1 1 auto;
+                                    padding: 12px;
+                                    font-weight: 400;
+                                    text-align: center;
+                                }
+                            }
+
+                            &:hover {
+                                color: $darkBlue;
+
+                                .reason {
+                                    display: flex;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            &.depAdd {
+                .softwares {
+                    .software {
+
+                        .rightArrow {
+                            display: none;
+                        }
+
+                        .softName {
+                            flex: 0 1 45%;
+                        }
+
+                        .version {
+                            display: block;
+                            font-size: 13px;
+                            margin-right: 8px;
+                        }
+
+                        .comment {
+                            display: none;
+                            font-size: 14px;
+                            color: $gray;
+                            cursor: pointer;
+                            position: relative;
+
+                            .reason {
+                                position: absolute;
+                                left: 120%;
+                                top: -30px;
+                                padding: 6px 12px;
+                                z-index: 99;
+                                background: $white;
+                                box-shadow: 0 0 12px -10px $fontBlack;
+                                width: 160px;
+                                height: 110px;
+
+                                // FLEX
+                                display: none;
+                                flex-direction: column;
+                                align-content: center;
+                                align-items: center;
+                                justify-content: flex-start;
+
+                                .title {
+                                    display: flex;
+                                    width: 100%;
+                                    border-bottom: solid 1px $borderGray;
+                                    margin: 0px;
+                                    padding: 12px;
+                                    font-weight: 500;
+                                }
+
+                                .content {
+                                    flex: 1 1 auto;
+                                    padding: 12px;
+                                    font-weight: 400;
+                                    text-align: center;
+                                }
+                            }
+
+                            &:hover {
+                                color: $darkBlue;
+
+                                .reason {
+                                    display: flex;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+
+        }
+
+        #btnEnviar {
+            position: absolute;
+            width: calc(100% - 55px);
+            height: 68px;
+            bottom: 0px;
+            // FLEX
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                width: 100px;
+                height: 40px;
+                background: $blue;
+                color: $white;
+                border-radius: 5px;
+                font-weight: 500;
+                font-size: 15px;
+                cursor: pointer;
+                box-shadow: 0px 3px 12px -3px rgba(0, 0, 0, 0.35);
+
+                // FLEX
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    background: $darkBlue;
+                    box-shadow: 0px 8px 16px -3px rgba(0, 0, 0, 0.35);
                 }
             }
         }

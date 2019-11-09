@@ -20,9 +20,42 @@
     <section id="description">
         <i class="far fa-lightbulb"></i>
         <div>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, blanditiis dicta nostrum, optio nisi voluptatum dolorem iusto repudiandae sed quae saepe officia a. Dolores, est expedita necessitatibus consectetur qui omnis?
-            </p>
+            <ul class="titles">
+                <li class="title active">
+                    Profesor
+                </li>
+                <li class="title">
+                    Jefe de Departamento
+                </li>
+                <li class="title">
+                    Coordinador de Tecnología
+                </li>
+                <li class="title">
+                    Coordinador de Compras
+                </li>
+                <li class="title">
+                    Administrador de Soporte
+                </li>
+            </ul>
+
+            <ul class="messages">
+                <li class="message active">
+                        Puedes ver tus clases, clasificar los software que necesitas o no necesitas para cada una, además de solicitar agregar uno nuevo. Podrás recibir notificación de la revisión de tus requerimientos. </br></br>
+                        Haz comentarios, organiza y lleva el control del proceso MPA de tus clases.
+                </li>
+                <li class="message">
+                        Lleva el control del proceso MPA de cada clase que pertenece al departamento. Encuentra el consolidado de los requerimientos del departamento, aprueba o edita las solicitudes. Envía al coordinador de tecnología.
+                </li>
+                <li class="message">
+                        Lleva el control del proceso MPA de cada departamento. Clasifica y autoriza los requerimientos de los departamentos. Envía el reporte al Coordinador de compras.
+                </li>
+                <li class="message">
+                        Recibe el consolidado de software solicitados para comprar. Accede al presupuesto y autoriza las compras con respecto a este. Actualiza y envía el informe al Coordinador de tecnología.
+                </li>
+                <li class="message">
+                        Recibe el consolidad de los requerimientos de software de todos los departamentos. Encuentra los software a eliminar, mantener, actualizar y agregar.
+                </li>
+            </ul>
 
             <ui class="indicators">
                 <li class="indicator active"></li>
@@ -31,8 +64,9 @@
                 <li class="indicator"></li>
                 <li class="indicator"></li>
             </ui>
-            <i class="fas fa-chevron-left arrow left"></i>
-            <i class="fas fa-chevron-right arrow right"></i>
+
+            <i class="fas fa-chevron-left arrow left" id="leftArrow"></i>
+            <i class="fas fa-chevron-right arrow right" id="rightArrow"></i>
         </div>
     </section>
     <section id="form">
@@ -72,4 +106,5 @@
 </body>
 
 <script src="./js/login.js"></script>
+
 </html>
