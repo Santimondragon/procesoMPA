@@ -18,7 +18,7 @@
 
 <body>
     <section class="topBar">
-        <h1 class="name">Coordinador de Tecnología</h1>
+        <h1 class="name">Jefe de Departamento</h1>
         <div class="actions">
             <i class="fas fa-cog settings"></i>
             <i class="fas fa-bell notifications">
@@ -59,22 +59,26 @@
                 </ul>
             </i>
         </div>
-        <img src="../images/ppTecnologia.png" alt="pp" class="profile">
+        <img src="../images/ppJefe.png" alt="pp" class="profile">
     </section>
 
     <section id="sideBar" class="closed">
             <div class="action" id="burguer">
                 <i class="fas fa-bars"></i>
                 <span>Cerrar</span>
-            </div> 
+            </div>
             <ul class="menu">
-                <a href="home.html" class="item selected">
-                    <i class="fas fa-university"></i>
-                    <span>Departamentos</span>
+                <a href="sinProfesor.html" class="item">
+                    <i class="fas fa-user-lock"></i>
+                    <span>Clases Sin Profesor</span>
                 </a>
-                <a href="#" class="item">
+                <a href="home.html" class="item">
                     <i class="fas fa-book"></i>
                     <span>Clases</span>
+                </a>
+                <a href="allStay.html" class="item selected">
+                    <i class="fas fa-tasks"></i>
+                    <span>Softwares</span>
                 </a>
             </ul>
             <a href="../" class="action">
@@ -84,111 +88,75 @@
         </section>
 
     <section id="dashboard">
-
-        <h1 class="title">Software para todos los Departamentos
-            <a href="#">Enviar</a>
-        </h1>
-
-        <article class="decision-4 techDelete">
+        <article class="decision-4 depDelete">
             <h1 class="name">Eliminar</h1>
             <div class="separator"></div>
             <ul class="softwares">
             </ul>
         </article>
-
-        <article class="decision-4 techStay">
+        <article class="decision-4 depStay">
             <h1 class="name">Mantener</h1>
             <div class="separator"></div>
             <ul class="softwares">
+
             </ul>
         </article>
-
-        <article class="decision-4 techUpgrade">
+        <article class="decision-4 depUgrade">
             <h1 class="name">Actualizar</h1>
             <div class="separator"></div>
             <ul class="softwares">
-                <li class="software">
-                    <a href="allStay.html"><i class="fas fa-chevron-left leftArrow"></i></a>
-                    <img src="../images/androidStudioIcon.png" alt="icon">
-                    <p class="softName">Android Studio</p>
-                    <p class="version">v. 9</p>
-                    <span class="amount">
-                        <span>3</span>
-                        <i class="fas fa-sort-down"></i>
-                    </span>
-                    <a href="allAdd.html"><i class="fas fa-chevron-right rightArrow"></i></a>
-                    <i class="fas fa-comment comment"></i>
-                    <ul class="group">
-                        <li>
-                            <span class="department">D. de Diseño</span>
-                            <span class="version">v 3.3.5</span>
-                            <i class="fas fa-comment comment"></i>
-                        </li>
-                        <li>
-                            <span class="department">D. de TICS</span>
-                            <span class="version">v 3.3.5</span>
-                            <i class="fas fa-comment comment"></i>
-                        </li>
-                        <li>
-                            <span class="department">D. de C. Naturales</span>
-                            <span class="version">v 3.3.5</span>
-                            <i class="fas fa-comment comment"></i>
-                        </li>
-                    </ul>
-                </li>
             </ul>
         </article>
-
-        <article class="decision-4 techAdd">
+        <article class="decision-4 depAdd">
             <h1 class="name">Agregar</h1>
             <div class="separator"></div>
             <ul class="softwares">
             </ul>
+            <div class="buttonHolder done">
+                <a href="javascript:history.back()">Agregar Nuevo</a>
+            </div>
         </article>
-
-        <section id="popUpSendTech">
+        <div id="btnEnviar">
+            <a href="#">Enviar</a>
+        </div>
+        <section id="popUpAdd">
             <article class="modal">
-                <h1 class="title">Confirmación MPA</h1>
+                <h1 class="title">Agregar Nuevo Software</h1>
                 <a class="close" href="javascript:history.back()"><i class="fas fa-times"></i></a>
-                <section class="prev">
-                    <article>
-                        <p>Eliminar</p>
-                        <div></div>
-                        <ul class="softwares">
-                        </ul>
-                    </article>
-
-                    <article>
-                        <p>Mantener</p>
-                        <div></div>
-                        <ul class="softwares">
-                        </ul>
-                    </article>
-
-                    <article>
-                        <p>Actualizar</p>
-                        <div></div>
-                        <ul class="softwares">
-                            <li class="software">
-                                <img src="../images/androidStudioIcon.png" alt="icon">
-                                <p>Android Studio</p>
-                            </li>
-                        </ul>
-                    </article>
-
-                    <article>
-                        <p>Agregar</p>
-                        <div></div>
-                        <ul class="softwares">
-                        </ul>
-                    </article>
-                </section>
-                <a class="button" href="clasePopUpEnviar.html">Confirmar</a>
+                <form class="formComment" action="">
+                    <section class="top">
+                        <div>
+                            <label for="name">Nombre del Software</label>
+                            <input name="name" type="text" placeholder="Nombre del Software">
+                        </div>
+                        <div>
+                            <label for="version">Versión</label>
+                            <input name="version" type="text" placeholder="Versión">
+                        </div>
+                    </section>
+                    <section class="bottom">
+                        <div>
+                            <label for="url">Enlace del Software (URL)</label>
+                            <input name="url" type="text" placeholder="www.enlace.com">
+                        </div>
+                        <div>
+                            <label for="license">Acción adicional</label>
+                            <select name="license" id="">
+                                <option value="" disabled selected>...</option>
+                                <option value="open">Open Source</option>
+                                <option value="mit">MIT</option>
+                                <option value="mit">GLP</option>
+                            </select>
+                        </div>
+                    </section>
+                    <a href="newAdded.html">Agregar</a>
+                </form>
             </article>
         </section>
     </section>
 
     <script src="../js/main.js"></script>
+    
 </body>
 
 </html>

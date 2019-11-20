@@ -699,6 +699,12 @@ body {
         align-items: flex-start;
         justify-content: flex-start;
 
+        iframe {
+            width: 100%;
+            height: 100%;
+            margin-top: -50px;
+        }
+
         .title {
             width: 100%;
             margin-top: 20px;
@@ -1050,6 +1056,7 @@ body {
                     align-content: center;
                     align-items: center;
                     justify-content: center;
+                    
                 }
 
                 &.done {
@@ -1288,7 +1295,7 @@ body {
                     font-size: 16px;
                     color: $gray;
                     background: $borderGray;
-                    cursor: progress;
+                    cursor: pointer;
 
                     // FLEX
                     display: flex;
@@ -1304,6 +1311,11 @@ body {
                         color: $white;
                         background: $blue;
                         cursor: pointer;
+
+                        &:hover {
+                            background: $darkBlue;
+                            box-shadow: 0px 8px 16px -3px rgba(0, 0, 0, 0.35);
+                        }
                     }
                 }
             }
@@ -1370,6 +1382,11 @@ body {
                         color: $white;
                         background: $blue;
                         cursor: pointer;
+
+                        &:hover {
+                            background: $darkBlue;
+                            box-shadow: 0px 8px 16px -3px rgba(0, 0, 0, 0.35);
+                        }
                     }
                 }
             }
